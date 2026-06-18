@@ -1,0 +1,251 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: IronLog
+      - generic [ref=e5]: Thu, Jun 18
+    - generic [ref=e6]:
+      - button "Monday" [ref=e7] [cursor=pointer]
+      - button "Wednesday" [ref=e8] [cursor=pointer]
+      - button "Friday" [ref=e9] [cursor=pointer]
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: Warmup Chest Press
+        - generic [ref=e14]: 15 × 2
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]: Weight
+          - generic [ref=e21]:
+            - button "−" [ref=e22] [cursor=pointer]
+            - spinbutton [ref=e23]: "0"
+            - generic [ref=e24]: kg
+            - button "+" [ref=e25] [cursor=pointer]
+        - generic [ref=e26]:
+          - generic [ref=e27]: Reps
+          - generic [ref=e28]:
+            - button "−" [ref=e29] [cursor=pointer]
+            - spinbutton [ref=e30]: "15"
+            - button "+" [ref=e31] [cursor=pointer]
+      - generic [ref=e32]:
+        - generic [ref=e33]: RPE
+        - generic [ref=e34]:
+          - button "1" [ref=e35] [cursor=pointer]
+          - button "2" [ref=e36] [cursor=pointer]
+          - button "3" [ref=e37] [cursor=pointer]
+          - button "4" [ref=e38] [cursor=pointer]
+          - button "5" [ref=e39] [cursor=pointer]
+          - button "6" [ref=e40] [cursor=pointer]
+          - button "7" [ref=e41] [cursor=pointer]
+          - button "8" [ref=e42] [cursor=pointer]
+          - button "9" [ref=e43] [cursor=pointer]
+          - button "10" [ref=e44] [cursor=pointer]
+      - textbox "optional note" [ref=e45]
+      - button "Log Set" [ref=e46] [cursor=pointer]
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]: Chest Press
+        - generic [ref=e50]: 15 × 3
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]: Weight
+          - generic [ref=e58]:
+            - button "−" [ref=e59] [cursor=pointer]
+            - spinbutton [ref=e60]: "0"
+            - generic [ref=e61]: kg
+            - button "+" [ref=e62] [cursor=pointer]
+        - generic [ref=e63]:
+          - generic [ref=e64]: Reps
+          - generic [ref=e65]:
+            - button "−" [ref=e66] [cursor=pointer]
+            - spinbutton [ref=e67]: "15"
+            - button "+" [ref=e68] [cursor=pointer]
+      - generic [ref=e69]:
+        - generic [ref=e70]: RPE
+        - generic [ref=e71]:
+          - button "1" [ref=e72] [cursor=pointer]
+          - button "2" [ref=e73] [cursor=pointer]
+          - button "3" [ref=e74] [cursor=pointer]
+          - button "4" [ref=e75] [cursor=pointer]
+          - button "5" [ref=e76] [cursor=pointer]
+          - button "6" [ref=e77] [cursor=pointer]
+          - button "7" [ref=e78] [cursor=pointer]
+          - button "8" [ref=e79] [cursor=pointer]
+          - button "9" [ref=e80] [cursor=pointer]
+          - button "10" [ref=e81] [cursor=pointer]
+      - textbox "optional note" [ref=e82]
+      - button "Log Set" [ref=e83] [cursor=pointer]
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - generic [ref=e86]: Chest Fly
+        - generic [ref=e87]: 15 × 3
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - generic [ref=e94]: Weight
+          - generic [ref=e95]:
+            - button "−" [ref=e96] [cursor=pointer]
+            - spinbutton [ref=e97]: "0"
+            - generic [ref=e98]: kg
+            - button "+" [ref=e99] [cursor=pointer]
+        - generic [ref=e100]:
+          - generic [ref=e101]: Reps
+          - generic [ref=e102]:
+            - button "−" [ref=e103] [cursor=pointer]
+            - spinbutton [ref=e104]: "15"
+            - button "+" [ref=e105] [cursor=pointer]
+      - generic [ref=e106]:
+        - generic [ref=e107]: RPE
+        - generic [ref=e108]:
+          - button "1" [ref=e109] [cursor=pointer]
+          - button "2" [ref=e110] [cursor=pointer]
+          - button "3" [ref=e111] [cursor=pointer]
+          - button "4" [ref=e112] [cursor=pointer]
+          - button "5" [ref=e113] [cursor=pointer]
+          - button "6" [ref=e114] [cursor=pointer]
+          - button "7" [ref=e115] [cursor=pointer]
+          - button "8" [ref=e116] [cursor=pointer]
+          - button "9" [ref=e117] [cursor=pointer]
+          - button "10" [ref=e118] [cursor=pointer]
+      - textbox "optional note" [ref=e119]
+      - button "Log Set" [ref=e120] [cursor=pointer]
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - generic [ref=e123]: Shoulder Press
+        - generic [ref=e124]: 10 × 3
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]: Weight
+          - generic [ref=e132]:
+            - button "−" [ref=e133] [cursor=pointer]
+            - spinbutton [ref=e134]: "0"
+            - generic [ref=e135]: kg
+            - button "+" [ref=e136] [cursor=pointer]
+        - generic [ref=e137]:
+          - generic [ref=e138]: Reps
+          - generic [ref=e139]:
+            - button "−" [ref=e140] [cursor=pointer]
+            - spinbutton [ref=e141]: "10"
+            - button "+" [ref=e142] [cursor=pointer]
+      - generic [ref=e143]:
+        - generic [ref=e144]: RPE
+        - generic [ref=e145]:
+          - button "1" [ref=e146] [cursor=pointer]
+          - button "2" [ref=e147] [cursor=pointer]
+          - button "3" [ref=e148] [cursor=pointer]
+          - button "4" [ref=e149] [cursor=pointer]
+          - button "5" [ref=e150] [cursor=pointer]
+          - button "6" [ref=e151] [cursor=pointer]
+          - button "7" [ref=e152] [cursor=pointer]
+          - button "8" [ref=e153] [cursor=pointer]
+          - button "9" [ref=e154] [cursor=pointer]
+          - button "10" [ref=e155] [cursor=pointer]
+      - textbox "optional note" [ref=e156]
+      - button "Log Set" [ref=e157] [cursor=pointer]
+    - generic [ref=e158]:
+      - generic [ref=e159]:
+        - generic [ref=e160]: Triceps Push Downs
+        - generic [ref=e161]: 15 × 3
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - generic [ref=e168]: Weight
+          - generic [ref=e169]:
+            - button "−" [ref=e170] [cursor=pointer]
+            - spinbutton [ref=e171]: "0"
+            - generic [ref=e172]: kg
+            - button "+" [ref=e173] [cursor=pointer]
+        - generic [ref=e174]:
+          - generic [ref=e175]: Reps
+          - generic [ref=e176]:
+            - button "−" [ref=e177] [cursor=pointer]
+            - spinbutton [ref=e178]: "15"
+            - button "+" [ref=e179] [cursor=pointer]
+      - generic [ref=e180]:
+        - generic [ref=e181]: RPE
+        - generic [ref=e182]:
+          - button "1" [ref=e183] [cursor=pointer]
+          - button "2" [ref=e184] [cursor=pointer]
+          - button "3" [ref=e185] [cursor=pointer]
+          - button "4" [ref=e186] [cursor=pointer]
+          - button "5" [ref=e187] [cursor=pointer]
+          - button "6" [ref=e188] [cursor=pointer]
+          - button "7" [ref=e189] [cursor=pointer]
+          - button "8" [ref=e190] [cursor=pointer]
+          - button "9" [ref=e191] [cursor=pointer]
+          - button "10" [ref=e192] [cursor=pointer]
+      - textbox "optional note" [ref=e193]
+      - button "Log Set" [ref=e194] [cursor=pointer]
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - generic [ref=e197]: Rear Shoulder
+        - generic [ref=e198]: 10 × 3
+      - generic [ref=e203]:
+        - generic [ref=e204]:
+          - generic [ref=e205]: Weight
+          - generic [ref=e206]:
+            - button "−" [ref=e207] [cursor=pointer]
+            - spinbutton [ref=e208]: "0"
+            - generic [ref=e209]: kg
+            - button "+" [ref=e210] [cursor=pointer]
+        - generic [ref=e211]:
+          - generic [ref=e212]: Reps
+          - generic [ref=e213]:
+            - button "−" [ref=e214] [cursor=pointer]
+            - spinbutton [ref=e215]: "10"
+            - button "+" [ref=e216] [cursor=pointer]
+      - generic [ref=e217]:
+        - generic [ref=e218]: RPE
+        - generic [ref=e219]:
+          - button "1" [ref=e220] [cursor=pointer]
+          - button "2" [ref=e221] [cursor=pointer]
+          - button "3" [ref=e222] [cursor=pointer]
+          - button "4" [ref=e223] [cursor=pointer]
+          - button "5" [ref=e224] [cursor=pointer]
+          - button "6" [ref=e225] [cursor=pointer]
+          - button "7" [ref=e226] [cursor=pointer]
+          - button "8" [ref=e227] [cursor=pointer]
+          - button "9" [ref=e228] [cursor=pointer]
+          - button "10" [ref=e229] [cursor=pointer]
+      - textbox "optional note" [ref=e230]
+      - button "Log Set" [ref=e231] [cursor=pointer]
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - generic [ref=e234]: Lateral Raises
+        - generic [ref=e235]: 10 × 3
+      - generic [ref=e240]:
+        - generic [ref=e241]:
+          - generic [ref=e242]: Weight
+          - generic [ref=e243]:
+            - button "−" [ref=e244] [cursor=pointer]
+            - spinbutton [ref=e245]: "0"
+            - generic [ref=e246]: kg
+            - button "+" [ref=e247] [cursor=pointer]
+        - generic [ref=e248]:
+          - generic [ref=e249]: Reps
+          - generic [ref=e250]:
+            - button "−" [ref=e251] [cursor=pointer]
+            - spinbutton [ref=e252]: "10"
+            - button "+" [ref=e253] [cursor=pointer]
+      - generic [ref=e254]:
+        - generic [ref=e255]: RPE
+        - generic [ref=e256]:
+          - button "1" [ref=e257] [cursor=pointer]
+          - button "2" [ref=e258] [cursor=pointer]
+          - button "3" [ref=e259] [cursor=pointer]
+          - button "4" [ref=e260] [cursor=pointer]
+          - button "5" [ref=e261] [cursor=pointer]
+          - button "6" [ref=e262] [cursor=pointer]
+          - button "7" [ref=e263] [cursor=pointer]
+          - button "8" [ref=e264] [cursor=pointer]
+          - button "9" [ref=e265] [cursor=pointer]
+          - button "10" [ref=e266] [cursor=pointer]
+      - textbox "optional note" [ref=e267]
+      - button "Log Set" [ref=e268] [cursor=pointer]
+  - navigation [ref=e269]:
+    - button "Today" [ref=e270] [cursor=pointer]:
+      - img [ref=e271]
+      - generic [ref=e272]: Today
+    - button "History" [ref=e273] [cursor=pointer]:
+      - img [ref=e274]
+      - generic [ref=e277]: History
+    - button "Program" [ref=e278] [cursor=pointer]:
+      - img [ref=e279]
+      - generic [ref=e282]: Program

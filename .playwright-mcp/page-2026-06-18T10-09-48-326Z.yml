@@ -1,0 +1,208 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Ironclad
+      - button "♡ Connect HR" [ref=e6] [cursor=pointer]
+      - generic [ref=e7]: Thu, Jun 18
+  - main [ref=e375]:
+    - generic [ref=e376]:
+      - generic [ref=e377]:
+        - textbox [ref=e378]: Monday
+        - combobox [ref=e379]:
+          - option "None"
+          - option "Sun"
+          - option "Mon" [selected]
+          - option "Tue"
+          - option "Wed"
+          - option "Thu"
+          - option "Fri"
+          - option "Sat"
+        - button "×" [ref=e380] [cursor=pointer]
+      - generic [ref=e381]:
+        - textbox [ref=e382]: Warmup Chest Press
+        - spinbutton [ref=e383]: "2"
+        - generic [ref=e384]: ×
+        - spinbutton [ref=e385]: "15"
+        - spinbutton "Rest seconds" [ref=e386]: "90"
+        - generic [ref=e387]: s
+        - button "×" [ref=e388] [cursor=pointer]
+      - generic [ref=e389]:
+        - textbox [ref=e390]: Chest Press
+        - spinbutton [ref=e391]: "3"
+        - generic [ref=e392]: ×
+        - spinbutton [ref=e393]: "15"
+        - spinbutton "Rest seconds" [ref=e394]: "90"
+        - generic [ref=e395]: s
+        - button "×" [ref=e396] [cursor=pointer]
+      - generic [ref=e397]:
+        - textbox [ref=e398]: Chest Fly
+        - spinbutton [ref=e399]: "3"
+        - generic [ref=e400]: ×
+        - spinbutton [ref=e401]: "15"
+        - spinbutton "Rest seconds" [ref=e402]: "90"
+        - generic [ref=e403]: s
+        - button "×" [ref=e404] [cursor=pointer]
+      - generic [ref=e405]:
+        - textbox [ref=e406]: Shoulder Press
+        - spinbutton [ref=e407]: "3"
+        - generic [ref=e408]: ×
+        - spinbutton [ref=e409]: "10"
+        - spinbutton "Rest seconds" [ref=e410]: "90"
+        - generic [ref=e411]: s
+        - button "×" [ref=e412] [cursor=pointer]
+      - generic [ref=e413]:
+        - textbox [ref=e414]: Triceps Push Downs
+        - spinbutton [ref=e415]: "3"
+        - generic [ref=e416]: ×
+        - spinbutton [ref=e417]: "15"
+        - spinbutton "Rest seconds" [ref=e418]: "90"
+        - generic [ref=e419]: s
+        - button "×" [ref=e420] [cursor=pointer]
+      - generic [ref=e421]:
+        - textbox [ref=e422]: Rear Shoulder
+        - spinbutton [ref=e423]: "3"
+        - generic [ref=e424]: ×
+        - spinbutton [ref=e425]: "10"
+        - spinbutton "Rest seconds" [ref=e426]: "90"
+        - generic [ref=e427]: s
+        - button "×" [ref=e428] [cursor=pointer]
+      - generic [ref=e429]:
+        - textbox [ref=e430]: Lateral Raises
+        - spinbutton [ref=e431]: "3"
+        - generic [ref=e432]: ×
+        - spinbutton [ref=e433]: "10"
+        - spinbutton "Rest seconds" [ref=e434]: "90"
+        - generic [ref=e435]: s
+        - button "×" [ref=e436] [cursor=pointer]
+      - button "+ Add Exercise" [ref=e437] [cursor=pointer]
+    - generic [ref=e438]:
+      - generic [ref=e439]:
+        - textbox [ref=e440]: Wednesday
+        - combobox [ref=e441]:
+          - option "None"
+          - option "Sun"
+          - option "Mon"
+          - option "Tue"
+          - option "Wed" [selected]
+          - option "Thu"
+          - option "Fri"
+          - option "Sat"
+        - button "×" [ref=e442] [cursor=pointer]
+      - generic [ref=e443]:
+        - textbox [ref=e444]: Lat Pull Downs
+        - spinbutton [ref=e445]: "4"
+        - generic [ref=e446]: ×
+        - spinbutton [ref=e447]: "12"
+        - spinbutton "Rest seconds" [ref=e448]: "90"
+        - generic [ref=e449]: s
+        - button "×" [ref=e450] [cursor=pointer]
+      - generic [ref=e451]:
+        - textbox [ref=e452]: Barbell Rows
+        - spinbutton [ref=e453]: "4"
+        - generic [ref=e454]: ×
+        - spinbutton [ref=e455]: "10"
+        - spinbutton "Rest seconds" [ref=e456]: "90"
+        - generic [ref=e457]: s
+        - button "×" [ref=e458] [cursor=pointer]
+      - generic [ref=e459]:
+        - textbox [ref=e460]: Seated Rows
+        - spinbutton [ref=e461]: "3"
+        - generic [ref=e462]: ×
+        - spinbutton [ref=e463]: "10"
+        - spinbutton "Rest seconds" [ref=e464]: "90"
+        - generic [ref=e465]: s
+        - button "×" [ref=e466] [cursor=pointer]
+      - generic [ref=e467]:
+        - textbox [ref=e468]: Seated Row Machine
+        - spinbutton [ref=e469]: "3"
+        - generic [ref=e470]: ×
+        - spinbutton [ref=e471]: "10"
+        - spinbutton "Rest seconds" [ref=e472]: "90"
+        - generic [ref=e473]: s
+        - button "×" [ref=e474] [cursor=pointer]
+      - generic [ref=e475]:
+        - textbox [ref=e476]: Bicep Alternating Curls
+        - spinbutton [ref=e477]: "4"
+        - generic [ref=e478]: ×
+        - spinbutton [ref=e479]: "10"
+        - spinbutton "Rest seconds" [ref=e480]: "90"
+        - generic [ref=e481]: s
+        - button "×" [ref=e482] [cursor=pointer]
+      - generic [ref=e483]:
+        - textbox [ref=e484]: Hammer Curls
+        - spinbutton [ref=e485]: "4"
+        - generic [ref=e486]: ×
+        - spinbutton [ref=e487]: "10"
+        - spinbutton "Rest seconds" [ref=e488]: "90"
+        - generic [ref=e489]: s
+        - button "×" [ref=e490] [cursor=pointer]
+      - generic [ref=e491]:
+        - textbox [ref=e492]: Easy Bar Curls
+        - spinbutton [ref=e493]: "3"
+        - generic [ref=e494]: ×
+        - spinbutton [ref=e495]: "10"
+        - spinbutton "Rest seconds" [ref=e496]: "90"
+        - generic [ref=e497]: s
+        - button "×" [ref=e498] [cursor=pointer]
+      - button "+ Add Exercise" [ref=e499] [cursor=pointer]
+    - generic [ref=e500]:
+      - generic [ref=e501]:
+        - textbox [ref=e502]: Friday
+        - combobox [ref=e503]:
+          - option "None"
+          - option "Sun"
+          - option "Mon"
+          - option "Tue"
+          - option "Wed"
+          - option "Thu"
+          - option "Fri" [selected]
+          - option "Sat"
+        - button "×" [ref=e504] [cursor=pointer]
+      - generic [ref=e505]:
+        - textbox [ref=e506]: Leg Extensions
+        - spinbutton [ref=e507]: "5"
+        - generic [ref=e508]: ×
+        - spinbutton [ref=e509]: "15"
+        - spinbutton "Rest seconds" [ref=e510]: "90"
+        - generic [ref=e511]: s
+        - button "×" [ref=e512] [cursor=pointer]
+      - generic [ref=e513]:
+        - textbox [ref=e514]: Leg Curls
+        - spinbutton [ref=e515]: "4"
+        - generic [ref=e516]: ×
+        - spinbutton [ref=e517]: "15"
+        - spinbutton "Rest seconds" [ref=e518]: "90"
+        - generic [ref=e519]: s
+        - button "×" [ref=e520] [cursor=pointer]
+      - generic [ref=e521]:
+        - textbox [ref=e522]: Leg Press
+        - spinbutton [ref=e523]: "4"
+        - generic [ref=e524]: ×
+        - spinbutton [ref=e525]: "20"
+        - spinbutton "Rest seconds" [ref=e526]: "90"
+        - generic [ref=e527]: s
+        - button "×" [ref=e528] [cursor=pointer]
+      - generic [ref=e529]:
+        - textbox [ref=e530]: Kettlebell Swings
+        - spinbutton [ref=e531]: "4"
+        - generic [ref=e532]: ×
+        - spinbutton [ref=e533]: "10"
+        - spinbutton "Rest seconds" [ref=e534]: "90"
+        - generic [ref=e535]: s
+        - button "×" [ref=e536] [cursor=pointer]
+      - button "+ Add Exercise" [ref=e537] [cursor=pointer]
+    - button "+ Add Day" [ref=e538] [cursor=pointer]
+    - generic [ref=e539]:
+      - button "Export Data" [ref=e540] [cursor=pointer]
+      - button "Import Data" [ref=e541] [cursor=pointer]
+      - button "Clear All Data" [ref=e542] [cursor=pointer]
+  - navigation [ref=e97]:
+    - button "Today" [ref=e98] [cursor=pointer]:
+      - img [ref=e99]
+      - generic [ref=e100]: Today
+    - button "History" [ref=e101] [cursor=pointer]:
+      - img [ref=e102]
+      - generic [ref=e105]: History
+    - button "Program" [active] [ref=e106] [cursor=pointer]:
+      - img [ref=e107]
+      - generic [ref=e110]: Program

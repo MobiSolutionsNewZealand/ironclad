@@ -1,0 +1,72 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Ironclad
+      - button "♡ Connect HR" [ref=e6] [cursor=pointer]
+      - generic [ref=e7]: Thu, Jun 18
+    - generic [ref=e8]:
+      - button "Monday" [ref=e9] [cursor=pointer]
+      - button "Wednesday" [ref=e10] [cursor=pointer]
+      - button "Friday" [ref=e11] [cursor=pointer]
+  - main [ref=e12]:
+    - generic [ref=e292]:
+      - generic [ref=e293]: Warmup Chest Press
+      - generic [ref=e294]: 15 × 2
+    - generic [ref=e299]:
+      - generic [ref=e300]: Chest Press
+      - generic [ref=e301]: 15 × 3
+    - generic [ref=e306]:
+      - generic [ref=e307]:
+        - generic [ref=e308]: Chest Fly
+        - generic [ref=e309]: 15 × 3
+      - generic [ref=e314]:
+        - generic [ref=e315]:
+          - generic [ref=e316]: Weight
+          - generic [ref=e317]:
+            - button "−" [ref=e318] [cursor=pointer]
+            - spinbutton [ref=e319]: "0"
+            - generic [ref=e320]: kg
+            - button "+" [ref=e321] [cursor=pointer]
+        - generic [ref=e322]:
+          - generic [ref=e323]: Reps
+          - generic [ref=e324]:
+            - button "−" [ref=e325] [cursor=pointer]
+            - spinbutton [ref=e326]: "15"
+            - button "+" [ref=e327] [cursor=pointer]
+      - generic [ref=e328]:
+        - generic [ref=e329]: RPE
+        - generic [ref=e330]:
+          - button "1" [ref=e331] [cursor=pointer]
+          - button "2" [ref=e332] [cursor=pointer]
+          - button "3" [ref=e333] [cursor=pointer]
+          - button "4" [ref=e334] [cursor=pointer]
+          - button "5" [ref=e335] [cursor=pointer]
+          - button "6" [ref=e336] [cursor=pointer]
+          - button "7" [ref=e337] [cursor=pointer]
+          - button "8" [ref=e338] [cursor=pointer]
+          - button "9" [ref=e339] [cursor=pointer]
+          - button "10" [ref=e340] [cursor=pointer]
+      - textbox "optional note" [ref=e341]
+      - button "Start" [ref=e342] [cursor=pointer]
+    - generic [ref=e344]:
+      - generic [ref=e345]: Shoulder Press
+      - generic [ref=e346]: 10 × 3
+    - generic [ref=e352]:
+      - generic [ref=e353]: Triceps Push Downs
+      - generic [ref=e354]: 15 × 3
+    - generic [ref=e360]:
+      - generic [ref=e361]: Rear Shoulder
+      - generic [ref=e362]: 10 × 3
+    - generic [ref=e368]:
+      - generic [ref=e369]: Lateral Raises
+      - generic [ref=e370]: 10 × 3
+  - navigation [ref=e97]:
+    - button "Today" [ref=e98] [cursor=pointer]:
+      - img [ref=e99]
+      - generic [ref=e100]: Today
+    - button "History" [ref=e101] [cursor=pointer]:
+      - img [ref=e102]
+      - generic [ref=e105]: History
+    - button "Program" [ref=e106] [cursor=pointer]:
+      - img [ref=e107]
+      - generic [ref=e110]: Program

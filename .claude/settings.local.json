@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"f:/Projects/Ironclad/ironlog/icons\")",
+      "Bash(python -c \"from PIL import Image; print\\('pillow available'\\)\")",
+      "Bash(python)",
+      "Bash(npx -y http-server -p 8080 -c-1 --silent)",
+      "Bash(python -m http.server 8080)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
+      "Bash(npx -y serve -l 8080 -s --no-clipboard)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "mcp__plugin_playwright_playwright__browser_fill_form",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "Bash(curl -s http://localhost:8080/)",
+      "mcp__plugin_playwright_playwright__browser_evaluate"
+    ],
+    "additionalDirectories": [
+      "f:\\Projects\\Ironclad\\ironlog"
+    ]
+  }
+}

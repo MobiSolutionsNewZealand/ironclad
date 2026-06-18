@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#1C1B1A"/>
+  <!-- Safe zone padding ~20% = 51px each side, glyph area ~410x410 centered -->
+  <!-- Barbell bar -->
+  <rect x="128" y="240" width="256" height="32" rx="6" fill="#EDE6D6"/>
+  <!-- Left plates -->
+  <rect x="138" y="176" width="36" height="160" rx="8" fill="#C1622B"/>
+  <rect x="180" y="196" width="24" height="120" rx="6" fill="#C1622B"/>
+  <!-- Right plates -->
+  <rect x="338" y="176" width="36" height="160" rx="8" fill="#C1622B"/>
+  <rect x="308" y="196" width="24" height="120" rx="6" fill="#C1622B"/>
+</svg>

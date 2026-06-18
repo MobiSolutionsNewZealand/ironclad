@@ -1,0 +1,30 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: IronLog
+      - generic [ref=e5]: Thu, Jun 18
+  - main [ref=e488]:
+    - generic [ref=e490]:
+      - generic [ref=e491]: Leg Extensions
+      - img [ref=e493]
+      - generic [ref=e494]:
+        - generic [ref=e495]: "Best: 60kg"
+        - generic [ref=e496]: "Latest: 60kg"
+        - generic [ref=e497]: "Trend: —"
+    - generic [ref=e498]: Sessions
+    - generic [ref=e500] [cursor=pointer]:
+      - generic [ref=e501]:
+        - generic [ref=e502]: Friday
+        - generic [ref=e503]: Thu, Jun 18
+      - generic [ref=e504]: 900kg vol
+      - generic [ref=e505]: ▶
+  - navigation [ref=e164]:
+    - button "Today" [ref=e165] [cursor=pointer]:
+      - img [ref=e166]
+      - generic [ref=e167]: Today
+    - button "History" [active] [ref=e168] [cursor=pointer]:
+      - img [ref=e169]
+      - generic [ref=e172]: History
+    - button "Program" [ref=e173] [cursor=pointer]:
+      - img [ref=e174]
+      - generic [ref=e177]: Program
