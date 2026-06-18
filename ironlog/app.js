@@ -44,7 +44,8 @@
   const KEYS = {
     program: 'ironlog:program',
     sessions: 'ironlog:sessions',
-    selectedDay: 'ironlog:selectedDay'
+    selectedDay: 'ironlog:selectedDay',
+    lastExportDate: 'ironlog:lastExportDate'
   };
 
   function loadJSON(key, fallback) {
@@ -76,34 +77,34 @@
         {
           id: 'day_mon', name: 'Monday', dayOfWeek: 1,
           exercises: [
-            { id: 'ex_wcp', name: 'Warmup Chest Press', targetSets: 2, targetReps: 15, targetRestSeconds: 90 },
-            { id: 'ex_cp', name: 'Chest Press', targetSets: 3, targetReps: 15, targetRestSeconds: 90 },
-            { id: 'ex_cf', name: 'Chest Fly', targetSets: 3, targetReps: 15, targetRestSeconds: 90 },
-            { id: 'ex_sp', name: 'Shoulder Press', targetSets: 3, targetReps: 10, targetRestSeconds: 90 },
-            { id: 'ex_tpd', name: 'Triceps Push Downs', targetSets: 3, targetReps: 15, targetRestSeconds: 90 },
-            { id: 'ex_rs', name: 'Rear Shoulder', targetSets: 3, targetReps: 10, targetRestSeconds: 90 },
-            { id: 'ex_lr', name: 'Lateral Raises', targetSets: 3, targetReps: 10, targetRestSeconds: 90 }
+            { id: 'ex_wcp', name: 'Warmup Chest Press', targetSets: 2, targetReps: 15, targetRestSeconds: 90, howTo: 'Same setup as Chest Press, but with a light weight focused purely on smooth, full-range reps to warm the shoulders and chest before working sets.' },
+            { id: 'ex_cp', name: 'Chest Press', targetSets: 3, targetReps: 15, targetRestSeconds: 90, howTo: 'Sit with back flat against the pad, grips at chest height. Press handles forward until arms extend without locking elbows, then control the return. Keep shoulder blades pinned back throughout.' },
+            { id: 'ex_cf', name: 'Chest Fly', targetSets: 3, targetReps: 15, targetRestSeconds: 90, howTo: 'Sit upright, arms slightly bent, palms facing in. Bring handles together in a wide arc in front of your chest, squeezing at the centre, then return slowly under control.' },
+            { id: 'ex_sp', name: 'Shoulder Press', targetSets: 3, targetReps: 10, targetRestSeconds: 90, howTo: 'Sit with back supported, grips at shoulder height. Press straight overhead until arms are extended, then lower back to the start without flaring elbows too far forward or back.' },
+            { id: 'ex_tpd', name: 'Triceps Push Downs', targetSets: 3, targetReps: 15, targetRestSeconds: 90, howTo: 'Stand facing the cable stack, elbows pinned to your sides. Push the bar/rope down until arms are fully extended, then let it return under control without letting elbows drift forward.' },
+            { id: 'ex_rs', name: 'Rear Shoulder', targetSets: 3, targetReps: 10, targetRestSeconds: 90, howTo: 'Sit facing into the pad (or bend forward for a cable version), arms slightly bent. Pull handles back and out to the sides, squeezing shoulder blades together, then return slowly.' },
+            { id: 'ex_lr', name: 'Lateral Raises', targetSets: 3, targetReps: 10, targetRestSeconds: 90, howTo: 'Stand with a slight bend in the elbows. Raise arms out to the sides to roughly shoulder height, leading with the elbows, then lower under control. Avoid swinging or shrugging the shoulders up.' }
           ]
         },
         {
           id: 'day_wed', name: 'Wednesday', dayOfWeek: 3,
           exercises: [
-            { id: 'ex_lpd', name: 'Lat Pull Downs', targetSets: 4, targetReps: 12, targetRestSeconds: 90 },
-            { id: 'ex_br', name: 'Barbell Rows', targetSets: 4, targetReps: 10, targetRestSeconds: 90 },
-            { id: 'ex_sr', name: 'Seated Rows', targetSets: 3, targetReps: 10, targetRestSeconds: 90 },
-            { id: 'ex_srm', name: 'Seated Row Machine', targetSets: 3, targetReps: 10, targetRestSeconds: 90 },
-            { id: 'ex_bac', name: 'Bicep Alternating Curls', targetSets: 4, targetReps: 10, targetRestSeconds: 90 },
-            { id: 'ex_hc', name: 'Hammer Curls', targetSets: 4, targetReps: 10, targetRestSeconds: 90 },
-            { id: 'ex_ebc', name: 'Easy Bar Curls', targetSets: 3, targetReps: 10, targetRestSeconds: 90 }
+            { id: 'ex_lpd', name: 'Lat Pull Downs', targetSets: 4, targetReps: 12, targetRestSeconds: 90, howTo: 'Grip the bar wider than shoulder width, sit with thighs locked under the pad. Pull the bar down to upper chest, driving elbows down and back, then control the return to a full stretch overhead.' },
+            { id: 'ex_br', name: 'Barbell Rows', targetSets: 4, targetReps: 10, targetRestSeconds: 90, howTo: 'Hinge at the hips with a flat back, grip the bar just outside shoulder width. Pull the bar up to your lower ribs, squeezing shoulder blades together, then lower with control without rounding the back.' },
+            { id: 'ex_sr', name: 'Seated Rows', targetSets: 3, targetReps: 10, targetRestSeconds: 90, howTo: 'Sit with knees slightly bent, grip the handle, back upright. Pull the handle to your stomach, driving elbows back, then extend arms fully forward without letting shoulders round.' },
+            { id: 'ex_srm', name: 'Seated Row Machine', targetSets: 3, targetReps: 10, targetRestSeconds: 90, howTo: 'Sit facing the machine, chest against the pad if available. Pull the handles back, leading with elbows, squeeze shoulder blades together, then return slowly to a full stretch.' },
+            { id: 'ex_bac', name: 'Bicep Alternating Curls', targetSets: 4, targetReps: 10, targetRestSeconds: 90, howTo: 'Stand or sit with arms hanging at your sides. Curl one dumbbell up toward the shoulder, rotating the palm up as you go, then lower under control before alternating sides.' },
+            { id: 'ex_hc', name: 'Hammer Curls', targetSets: 4, targetReps: 10, targetRestSeconds: 90, howTo: 'Same setup as alternating curls, but palms face each other throughout (neutral grip). Curl up, squeeze briefly, then lower slowly.' },
+            { id: 'ex_ebc', name: 'Easy Bar Curls', targetSets: 3, targetReps: 10, targetRestSeconds: 90, howTo: 'Grip the EZ-bar at the angled sections, stand with elbows close to your sides. Curl the bar up toward your shoulders without swinging your hips, then lower under control.' }
           ]
         },
         {
           id: 'day_fri', name: 'Friday', dayOfWeek: 5,
           exercises: [
-            { id: 'ex_le', name: 'Leg Extensions', targetSets: 5, targetReps: 15, targetRestSeconds: 90 },
-            { id: 'ex_lc', name: 'Leg Curls', targetSets: 4, targetReps: 15, targetRestSeconds: 90 },
-            { id: 'ex_lp', name: 'Leg Press', targetSets: 4, targetReps: 20, targetRestSeconds: 90 },
-            { id: 'ex_ks', name: 'Kettlebell Swings', targetSets: 4, targetReps: 10, targetRestSeconds: 90 }
+            { id: 'ex_le', name: 'Leg Extensions', targetSets: 5, targetReps: 15, targetRestSeconds: 90, howTo: 'Sit with the pad resting on your shins, back against the seat. Extend your legs until straight (without locking out hard), pause briefly, then lower under control.' },
+            { id: 'ex_lc', name: 'Leg Curls', targetSets: 4, targetReps: 15, targetRestSeconds: 90, howTo: 'Pad positioned behind your ankles. Curl your heels toward your glutes, squeeze briefly, then extend back out under control.' },
+            { id: 'ex_lp', name: 'Leg Press', targetSets: 4, targetReps: 20, targetRestSeconds: 90, howTo: 'Sit back in the machine with feet shoulder-width on the platform. Lower the platform by bending your knees toward your chest without rounding your lower back, then press back up without locking your knees out hard.' },
+            { id: 'ex_ks', name: 'Kettlebell Swings', targetSets: 4, targetReps: 10, targetRestSeconds: 90, howTo: 'Stand with feet shoulder-width apart, kettlebell in front of you. Hinge at the hips to swing the bell back between your legs, then drive through your hips to swing it up to chest height, keeping your back flat throughout.' }
           ]
         }
       ]
@@ -203,6 +204,7 @@
     return sess;
   }
 
+  // Matches by exerciseId — won't link across id changes (e.g. after program import). Intentional trade-off.
   function getLastWeight(exerciseId, excludeDate) {
     for (var i = sessions.length - 1; i >= 0; i--) {
       var s = sessions[i];
@@ -506,6 +508,15 @@
     h += '<span class="exercise-name">' + esc(ex.name) + '</span>';
     h += '<span class="exercise-target">' + ex.targetReps + ' &times; ' + ex.targetSets + '</span>';
     h += '</div>';
+
+    if (ex.howTo) {
+      var ytQuery = encodeURIComponent(ex.name + ' proper form');
+      h += '<details class="howto-disclosure">';
+      h += '<summary class="howto-toggle">ⓘ How to</summary>';
+      h += '<div class="howto-body">' + esc(ex.howTo) + '</div>';
+      h += '<a class="howto-demo-link" href="https://www.youtube.com/results?search_query=' + ytQuery + '" target="_blank" rel="noopener">Search a demo &rarr;</a>';
+      h += '</details>';
+    }
 
     if (lastWeight != null) {
       h += '<div class="exercise-last">last: ' + lastWeight + 'kg</div>';
@@ -872,6 +883,51 @@
 
   // ── Program view ──
 
+  var SETS_PRESETS = [1, 2, 3, 4, 5, 6, 8];
+  var REPS_PRESETS = [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 30];
+  var REST_PRESETS = [
+    { value: 30, label: '30 sec' }, { value: 45, label: '45 sec' },
+    { value: 60, label: '60 sec' }, { value: 90, label: '90 sec' },
+    { value: 120, label: '2 min' }, { value: 180, label: '3 min' },
+    { value: 300, label: '5 min' }
+  ];
+
+  var customFields = new Set();
+
+  function buildNumericSelect(presets, current, action, dayId, exId) {
+    var inPreset = presets.indexOf(current) !== -1;
+    var isCustom = !inPreset || customFields.has(exId + ':' + action);
+    var h = '<div class="program-ex-field">';
+    h += '<select class="program-ex-select" data-action="' + action + '" data-day="' + dayId + '" data-ex="' + exId + '">';
+    presets.forEach(function (v) {
+      h += '<option value="' + v + '"' + (v === current && !isCustom ? ' selected' : '') + '>' + v + '</option>';
+    });
+    h += '<option value="custom"' + (isCustom ? ' selected' : '') + '>Custom…</option>';
+    h += '</select>';
+    if (isCustom) {
+      h += '<input type="number" class="program-ex-custom" data-action="' + action + '-custom" data-day="' + dayId + '" data-ex="' + exId + '" value="' + current + '" inputmode="numeric" min="1">';
+    }
+    h += '</div>';
+    return h;
+  }
+
+  function buildRestSelect(current, dayId, exId) {
+    var inPreset = REST_PRESETS.some(function (p) { return p.value === current; });
+    var isCustom = !inPreset || customFields.has(exId + ':change-rest');
+    var h = '<div class="program-ex-field">';
+    h += '<select class="program-ex-select" data-action="change-rest" data-day="' + dayId + '" data-ex="' + exId + '">';
+    REST_PRESETS.forEach(function (p) {
+      h += '<option value="' + p.value + '"' + (p.value === current && !isCustom ? ' selected' : '') + '>' + p.label + '</option>';
+    });
+    h += '<option value="custom"' + (isCustom ? ' selected' : '') + '>Custom…</option>';
+    h += '</select>';
+    if (isCustom) {
+      h += '<input type="number" class="program-ex-custom" data-action="change-rest-custom" data-day="' + dayId + '" data-ex="' + exId + '" value="' + current + '" inputmode="numeric" min="0">';
+    }
+    h += '</div>';
+    return h;
+  }
+
   function renderProgram() {
     var container = views.program;
     var dowNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -892,15 +948,25 @@
       html += '<button class="btn-delete-day" data-action="delete-day" data-day="' + day.id + '">&times;</button>';
       html += '</div>';
 
+      if (day.exercises.length > 0) {
+        html += '<div class="program-ex-col-headers"><span>Sets</span><span>Reps</span><span>Rest</span></div>';
+      }
+
       day.exercises.forEach(function (ex) {
         html += '<div class="program-exercise" data-ex-id="' + ex.id + '">';
+        html += '<div class="program-ex-line1">';
         html += '<input type="text" class="program-ex-name" value="' + esc(ex.name) + '" data-action="rename-ex" data-day="' + day.id + '" data-ex="' + ex.id + '">';
-        html += '<input type="number" class="program-ex-num" value="' + ex.targetSets + '" data-action="change-sets" data-day="' + day.id + '" data-ex="' + ex.id + '" inputmode="numeric" min="1">';
-        html += '<span class="program-ex-x">&times;</span>';
-        html += '<input type="number" class="program-ex-num" value="' + ex.targetReps + '" data-action="change-reps" data-day="' + day.id + '" data-ex="' + ex.id + '" inputmode="numeric" min="1">';
-        html += '<input type="number" class="program-ex-num" value="' + (ex.targetRestSeconds || 90) + '" data-action="change-rest" data-day="' + day.id + '" data-ex="' + ex.id + '" inputmode="numeric" min="0" title="Rest seconds">';
-        html += '<span class="program-ex-rest-label">s</span>';
         html += '<button class="btn-delete-ex" data-action="delete-ex" data-day="' + day.id + '" data-ex="' + ex.id + '">&times;</button>';
+        html += '</div>';
+        html += '<div class="program-ex-line2">';
+        html += buildNumericSelect(SETS_PRESETS, ex.targetSets, 'change-sets', day.id, ex.id);
+        html += buildNumericSelect(REPS_PRESETS, ex.targetReps, 'change-reps', day.id, ex.id);
+        html += buildRestSelect(ex.targetRestSeconds || 90, day.id, ex.id);
+        html += '</div>';
+        html += '<details class="program-howto-details">';
+        html += '<summary class="program-howto-toggle">' + (ex.howTo ? 'Edit how-to notes' : '+ Add how-to notes') + '</summary>';
+        html += '<textarea class="program-howto-textarea" data-action="change-howto" data-day="' + day.id + '" data-ex="' + ex.id + '" rows="3" placeholder="Form cues, setup notes...">' + esc(ex.howTo || '') + '</textarea>';
+        html += '</details>';
         html += '</div>';
       });
 
@@ -910,9 +976,20 @@
 
     html += '<button class="btn-add-day" data-action="add-day">+ Add Day</button>';
 
+    if (shouldShowBackupReminder()) {
+      html += '<div class="backup-reminder" id="backupReminder">';
+      html += '<span>Haven\'t backed up in a while — export your data?</span>';
+      html += '<div class="backup-reminder-actions">';
+      html += '<button class="btn-action" data-action="export" style="flex:1">Export Now</button>';
+      html += '<button class="btn-reminder-dismiss" data-action="dismiss-reminder">&times;</button>';
+      html += '</div></div>';
+    }
+
     html += '<div class="data-actions">';
-    html += '<button class="btn-action" data-action="export">Export Data</button>';
-    html += '<button class="btn-action" data-action="import">Import Data</button>';
+    html += '<button class="btn-action" data-action="share-program">Share Program</button>';
+    html += '<button class="btn-action" data-action="import-program">Import Program</button>';
+    html += '<button class="btn-action" data-action="export">Export All Data</button>';
+    html += '<button class="btn-action" data-action="import">Import All Data</button>';
     html += '<button class="btn-action danger" data-action="clear-all">Clear All Data</button>';
     html += '</div>';
 
@@ -922,6 +999,8 @@
     container.addEventListener('click', handleProgramClick);
     container.removeEventListener('change', handleProgramChange);
     container.addEventListener('change', handleProgramChange);
+    container.removeEventListener('input', handleProgramChange);
+    container.addEventListener('input', handleProgramChange);
   }
 
   function handleProgramClick(e) {
@@ -977,8 +1056,17 @@
       });
     }
 
-    if (action === 'export') exportData();
-    if (action === 'import') document.getElementById('importInput').click();
+    if (action === 'dismiss-reminder') {
+      reminderDismissed = true;
+      var rem = document.getElementById('backupReminder');
+      if (rem) rem.remove();
+      return;
+    }
+
+    if (action === 'share-program') { shareProgram(); return; }
+    if (action === 'import-program') { document.getElementById('importProgramInput').click(); return; }
+    if (action === 'export') { exportData(); return; }
+    if (action === 'import') { document.getElementById('importInput').click(); return; }
     if (action === 'clear-all') {
       confirm('Clear All Data', 'This will delete your entire program and all session history. This cannot be undone.', 'Clear All').then(function (ok) {
         if (!ok) return;
@@ -1001,13 +1089,22 @@
     }
   }
 
+  function findExercise(dayId, exId) {
+    var day = program.days.find(function (d) { return d.id === dayId; });
+    if (!day) return null;
+    var ex = day.exercises.find(function (x) { return x.id === exId; });
+    return ex || null;
+  }
+
   function handleProgramChange(e) {
     var el = e.target;
     var action = el.dataset.action;
+    if (!action) return;
 
     if (action === 'rename-day') {
       var day = program.days.find(function (d) { return d.id === el.dataset.day; });
       if (day) { day.name = el.value.trim() || day.name; saveAndRenderProgram(); }
+      return;
     }
 
     if (action === 'change-dow') {
@@ -1017,38 +1114,55 @@
         day2.dayOfWeek = v === -1 ? null : v;
         saveAndRenderProgram();
       }
+      return;
     }
 
     if (action === 'rename-ex') {
-      var day3 = program.days.find(function (d) { return d.id === el.dataset.day; });
-      if (day3) {
-        var ex = day3.exercises.find(function (x) { return x.id === el.dataset.ex; });
-        if (ex) { ex.name = el.value.trim() || ex.name; saveProgram(); }
-      }
+      var ex = findExercise(el.dataset.day, el.dataset.ex);
+      if (ex) { ex.name = el.value.trim() || ex.name; saveProgram(); }
+      return;
     }
 
-    if (action === 'change-sets') {
-      var day4 = program.days.find(function (d) { return d.id === el.dataset.day; });
-      if (day4) {
-        var ex2 = day4.exercises.find(function (x) { return x.id === el.dataset.ex; });
-        if (ex2) { ex2.targetSets = Math.max(1, parseInt(el.value) || 1); saveProgram(); }
-      }
+    if (action === 'change-howto') {
+      var exH = findExercise(el.dataset.day, el.dataset.ex);
+      if (exH) { exH.howTo = el.value; saveProgram(); }
+      return;
     }
 
-    if (action === 'change-reps') {
-      var day5 = program.days.find(function (d) { return d.id === el.dataset.day; });
-      if (day5) {
-        var ex3 = day5.exercises.find(function (x) { return x.id === el.dataset.ex; });
-        if (ex3) { ex3.targetReps = Math.max(1, parseInt(el.value) || 1); saveProgram(); }
+    // Dropdown selects (sets/reps/rest)
+    if (action === 'change-sets' || action === 'change-reps' || action === 'change-rest') {
+      var key = el.dataset.ex + ':' + action;
+      if (el.value === 'custom') {
+        customFields.add(key);
+        renderProgram();
+        var customInput = views.program.querySelector('input[data-action="' + action + '-custom"][data-ex="' + el.dataset.ex + '"]');
+        if (customInput) customInput.focus();
+      } else {
+        customFields.delete(key);
+        var ex2 = findExercise(el.dataset.day, el.dataset.ex);
+        if (ex2) {
+          var val = parseInt(el.value);
+          if (action === 'change-sets') ex2.targetSets = Math.max(1, val || 1);
+          else if (action === 'change-reps') ex2.targetReps = Math.max(1, val || 1);
+          else ex2.targetRestSeconds = Math.max(0, val || 0);
+          saveProgram();
+          renderProgram();
+        }
       }
+      return;
     }
 
-    if (action === 'change-rest') {
-      var day6 = program.days.find(function (d) { return d.id === el.dataset.day; });
-      if (day6) {
-        var ex4 = day6.exercises.find(function (x) { return x.id === el.dataset.ex; });
-        if (ex4) { ex4.targetRestSeconds = Math.max(0, parseInt(el.value) || 0); saveProgram(); }
+    // Custom number inputs
+    if (action === 'change-sets-custom' || action === 'change-reps-custom' || action === 'change-rest-custom') {
+      var ex3 = findExercise(el.dataset.day, el.dataset.ex);
+      if (ex3) {
+        var cval = parseInt(el.value);
+        if (action === 'change-sets-custom') ex3.targetSets = Math.max(1, cval || 1);
+        else if (action === 'change-reps-custom') ex3.targetReps = Math.max(1, cval || 1);
+        else ex3.targetRestSeconds = Math.max(0, cval || 0);
+        saveProgram();
       }
+      return;
     }
   }
 
@@ -1063,6 +1177,20 @@
   }
 
   // ── Import / Export ──
+
+  var reminderDismissed = false;
+
+  function markExported() {
+    localStorage.setItem(KEYS.lastExportDate, todayISO());
+  }
+
+  function shouldShowBackupReminder() {
+    if (reminderDismissed) return false;
+    var last = localStorage.getItem(KEYS.lastExportDate);
+    if (!last) return true;
+    var diff = (new Date() - new Date(last + 'T00:00:00')) / (1000 * 60 * 60 * 24);
+    return diff >= 14;
+  }
 
   function exportData() {
     var data = {
@@ -1080,7 +1208,83 @@
     a.download = 'ironclad-backup-' + todayISO() + '.json';
     a.click();
     URL.revokeObjectURL(url);
+    markExported();
     toast('Data exported');
+  }
+
+  function shareProgram() {
+    var data = {
+      ironclad: true,
+      type: 'program',
+      version: 2,
+      exportedAt: new Date().toISOString(),
+      program: program
+    };
+    var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'ironclad-program-' + todayISO() + '.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    markExported();
+    toast('Program shared');
+  }
+
+  function importProgramFromFile(file) {
+    var reader = new FileReader();
+    reader.onload = function (evt) {
+      try {
+        var data = JSON.parse(evt.target.result);
+
+        var prog = data.program || data;
+        if (!prog.days || !Array.isArray(prog.days)) throw new Error('No valid program found');
+        for (var i = 0; i < prog.days.length; i++) {
+          if (!prog.days[i].exercises || !Array.isArray(prog.days[i].exercises)) {
+            throw new Error('Invalid day structure');
+          }
+        }
+
+        confirm(
+          'Import Program',
+          'This replaces your current program (days & exercises). Your logged history is not affected.',
+          'Replace Program'
+        ).then(function (ok) {
+          if (!ok) return;
+          var newProg = { days: [] };
+          prog.days.forEach(function (day) {
+            var newDay = {
+              id: 'day_' + uid(),
+              name: day.name || 'Imported Day',
+              dayOfWeek: day.dayOfWeek != null ? day.dayOfWeek : null,
+              exercises: []
+            };
+            (day.exercises || []).forEach(function (ex) {
+              newDay.exercises.push({
+                id: 'ex_' + uid(),
+                name: ex.name || 'Exercise',
+                targetSets: ex.targetSets || 3,
+                targetReps: ex.targetReps || 10,
+                targetRestSeconds: ex.targetRestSeconds != null ? ex.targetRestSeconds : 90,
+                howTo: ex.howTo || ''
+              });
+            });
+            newProg.days.push(newDay);
+          });
+          program = newProg;
+          saveJSON(KEYS.program, program);
+          selectedDayId = autoSelectDay();
+          localStorage.setItem(KEYS.selectedDay, selectedDayId || '');
+          focusExerciseId = null;
+          renderDayChips();
+          renderProgram();
+          toast('Program imported');
+        });
+      } catch (err) {
+        toast('Import failed: not a valid program file');
+      }
+    };
+    reader.readAsText(file);
   }
 
   document.getElementById('importInput').addEventListener('change', function (e) {
@@ -1125,6 +1329,13 @@
     e.target.value = '';
   });
 
+  document.getElementById('importProgramInput').addEventListener('change', function (e) {
+    var file = e.target.files[0];
+    if (!file) return;
+    importProgramFromFile(file);
+    e.target.value = '';
+  });
+
   // ── Init ──
 
   function init() {
@@ -1136,10 +1347,58 @@
     renderToday();
   }
 
-  // ── Service Worker ──
+  // ── Service Worker + update detection ──
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js').catch(function () {});
+    navigator.serviceWorker.register('./service-worker.js').then(function (reg) {
+      function onNewWorkerInstalled(worker) {
+        if (!navigator.serviceWorker.controller) return;
+        showUpdateToast(worker);
+      }
+
+      if (reg.waiting) {
+        onNewWorkerInstalled(reg.waiting);
+      }
+
+      reg.addEventListener('updatefound', function () {
+        var newWorker = reg.installing;
+        if (!newWorker) return;
+        newWorker.addEventListener('statechange', function () {
+          if (newWorker.state === 'installed') {
+            onNewWorkerInstalled(newWorker);
+          }
+        });
+      });
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible') {
+          reg.update();
+        }
+      });
+    }).catch(function () {});
+
+    var refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (refreshing) return;
+      refreshing = true;
+      window.location.reload();
+    });
+  }
+
+  function showUpdateToast(worker) {
+    var el = document.getElementById('toast');
+    el.textContent = 'New version available — tap to refresh.';
+    el.classList.add('show');
+    clearTimeout(toast._t);
+    el.style.pointerEvents = 'auto';
+    el.style.cursor = 'pointer';
+    el.onclick = function () {
+      el.classList.remove('show');
+      el.style.pointerEvents = '';
+      el.style.cursor = '';
+      el.onclick = null;
+      worker.postMessage({ type: 'SKIP_WAITING' });
+    };
   }
 
   init();

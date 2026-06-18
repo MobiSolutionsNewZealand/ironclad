@@ -286,6 +286,52 @@ button {
   margin-bottom: 10px;
 }
 
+/* ── How-to disclosure (Today view) ── */
+
+.howto-disclosure {
+  margin-bottom: 8px;
+}
+
+.howto-toggle {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--chalk-dim);
+  cursor: pointer;
+  list-style: none;
+  padding: 4px 0;
+}
+
+.howto-toggle::-webkit-details-marker { display: none; }
+
+.howto-toggle::before {
+  content: '▸ ';
+  font-size: 0.65rem;
+}
+
+.howto-disclosure[open] .howto-toggle::before {
+  content: '▾ ';
+}
+
+.howto-body {
+  font-size: 0.8rem;
+  color: var(--chalk-dim);
+  line-height: 1.45;
+  padding: 6px 0;
+}
+
+.howto-demo-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--rust);
+  text-decoration: none;
+  padding: 4px 0 2px;
+}
+
+.howto-demo-link:active {
+  color: var(--chalk);
+}
+
 /* ── Set dots ── */
 
 .set-dots {
@@ -889,17 +935,37 @@ button {
   color: var(--chalk);
 }
 
-.program-exercise {
+.program-ex-col-headers {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 8px 16px 2px;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--chalk-dim);
+}
+
+.program-ex-col-headers span {
+  flex: 1;
+  text-align: center;
+}
+
+.program-exercise {
   padding: 10px 16px;
   border-bottom: 1px solid var(--line);
-  flex-wrap: wrap;
 }
 
 .program-exercise:last-of-type {
   border-bottom: none;
+}
+
+.program-ex-line1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .program-ex-name {
@@ -916,47 +982,105 @@ button {
   border-bottom-color: var(--rust);
 }
 
-.program-ex-num {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  width: 38px;
-  text-align: center;
-  background: var(--steel-2);
-  color: var(--chalk);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 4px;
-  min-height: 32px;
-}
-
-.program-ex-x {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--chalk-dim);
-}
-
-.program-ex-rest-label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--chalk-dim);
-  margin-left: 4px;
-}
-
 .btn-delete-ex {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--chalk-dim);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   flex-shrink: 0;
 }
 
 .btn-delete-ex:active {
   background: var(--danger);
   color: var(--chalk);
+}
+
+.program-ex-line2 {
+  display: flex;
+  gap: 8px;
+}
+
+.program-ex-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.program-ex-select {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--steel-2);
+  color: var(--chalk);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 8px 6px;
+  min-height: 40px;
+  appearance: auto;
+}
+
+.program-ex-custom {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-align: center;
+  background: var(--iron);
+  color: var(--chalk);
+  border: 1px solid var(--rust);
+  border-radius: var(--radius-sm);
+  padding: 6px;
+  min-height: 36px;
+  -moz-appearance: textfield;
+}
+
+.program-ex-custom::-webkit-inner-spin-button,
+.program-ex-custom::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.program-howto-details {
+  margin-top: 6px;
+}
+
+.program-howto-toggle {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--rust);
+  cursor: pointer;
+  list-style: none;
+  padding: 2px 0;
+}
+
+.program-howto-toggle::-webkit-details-marker { display: none; }
+
+.program-howto-textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 10px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--chalk);
+  background: var(--iron);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+  line-height: 1.4;
+  min-height: 60px;
+}
+
+.program-howto-textarea::placeholder {
+  color: var(--chalk-dim);
+  opacity: 0.5;
+}
+
+.program-howto-textarea:focus {
+  border-color: var(--rust);
 }
 
 .btn-add-exercise {
@@ -997,6 +1121,43 @@ button {
 .btn-add-day:active {
   border-color: var(--rust);
   color: var(--rust);
+}
+
+/* ── Backup reminder ── */
+
+.backup-reminder {
+  background: var(--steel);
+  border: 1px solid var(--rust-dim);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  color: var(--chalk-dim);
+  line-height: 1.4;
+}
+
+.backup-reminder-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.btn-reminder-dismiss {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--chalk-dim);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+
+.btn-reminder-dismiss:active {
+  background: var(--steel-2);
 }
 
 /* ── Data actions ── */
