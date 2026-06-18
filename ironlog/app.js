@@ -986,6 +986,8 @@
     }
 
     html += '<div class="data-actions">';
+    html += '<button class="btn-action" data-action="show-qr">Show QR</button>';
+    html += '<button class="btn-action" data-action="scan-qr">Scan to Import</button>';
     html += '<button class="btn-action" data-action="share-program">Share Program</button>';
     html += '<button class="btn-action" data-action="import-program">Import Program</button>';
     html += '<button class="btn-action" data-action="export">Export All Data</button>';
@@ -1063,6 +1065,8 @@
       return;
     }
 
+    if (action === 'show-qr') { showProgramQR(); return; }
+    if (action === 'scan-qr') { openScanner(); return; }
     if (action === 'share-program') { shareProgram(); return; }
     if (action === 'import-program') { document.getElementById('importProgramInput').click(); return; }
     if (action === 'export') { exportData(); return; }
@@ -1231,12 +1235,49 @@
     toast('Program shared');
   }
 
+  function importProgramFromData(prog) {
+    confirm(
+      'Import Program',
+      'This replaces your current program (days & exercises). Your logged history is not affected.',
+      'Replace Program'
+    ).then(function (ok) {
+      if (!ok) return;
+      var newProg = { days: [] };
+      prog.days.forEach(function (day) {
+        var newDay = {
+          id: 'day_' + uid(),
+          name: day.name || 'Imported Day',
+          dayOfWeek: day.dayOfWeek != null ? day.dayOfWeek : null,
+          exercises: []
+        };
+        (day.exercises || []).forEach(function (ex) {
+          newDay.exercises.push({
+            id: 'ex_' + uid(),
+            name: ex.name || 'Exercise',
+            targetSets: ex.targetSets || 3,
+            targetReps: ex.targetReps || 10,
+            targetRestSeconds: ex.targetRestSeconds != null ? ex.targetRestSeconds : 90,
+            howTo: ex.howTo || ''
+          });
+        });
+        newProg.days.push(newDay);
+      });
+      program = newProg;
+      saveJSON(KEYS.program, program);
+      selectedDayId = autoSelectDay();
+      localStorage.setItem(KEYS.selectedDay, selectedDayId || '');
+      focusExerciseId = null;
+      renderDayChips();
+      renderProgram();
+      toast('Program imported');
+    });
+  }
+
   function importProgramFromFile(file) {
     var reader = new FileReader();
     reader.onload = function (evt) {
       try {
         var data = JSON.parse(evt.target.result);
-
         var prog = data.program || data;
         if (!prog.days || !Array.isArray(prog.days)) throw new Error('No valid program found');
         for (var i = 0; i < prog.days.length; i++) {
@@ -1244,42 +1285,7 @@
             throw new Error('Invalid day structure');
           }
         }
-
-        confirm(
-          'Import Program',
-          'This replaces your current program (days & exercises). Your logged history is not affected.',
-          'Replace Program'
-        ).then(function (ok) {
-          if (!ok) return;
-          var newProg = { days: [] };
-          prog.days.forEach(function (day) {
-            var newDay = {
-              id: 'day_' + uid(),
-              name: day.name || 'Imported Day',
-              dayOfWeek: day.dayOfWeek != null ? day.dayOfWeek : null,
-              exercises: []
-            };
-            (day.exercises || []).forEach(function (ex) {
-              newDay.exercises.push({
-                id: 'ex_' + uid(),
-                name: ex.name || 'Exercise',
-                targetSets: ex.targetSets || 3,
-                targetReps: ex.targetReps || 10,
-                targetRestSeconds: ex.targetRestSeconds != null ? ex.targetRestSeconds : 90,
-                howTo: ex.howTo || ''
-              });
-            });
-            newProg.days.push(newDay);
-          });
-          program = newProg;
-          saveJSON(KEYS.program, program);
-          selectedDayId = autoSelectDay();
-          localStorage.setItem(KEYS.selectedDay, selectedDayId || '');
-          focusExerciseId = null;
-          renderDayChips();
-          renderProgram();
-          toast('Program imported');
-        });
+        importProgramFromData(prog);
       } catch (err) {
         toast('Import failed: not a valid program file');
       }
@@ -1335,6 +1341,126 @@
     importProgramFromFile(file);
     e.target.value = '';
   });
+
+  // ── QR sharing ──
+
+  function buildQRPayload() {
+    return JSON.stringify({
+      d: program.days.map(function (day) {
+        return {
+          n: day.name,
+          w: day.dayOfWeek,
+          e: day.exercises.map(function (ex) {
+            return { n: ex.name, s: ex.targetSets, r: ex.targetReps, t: ex.targetRestSeconds || 90 };
+          })
+        };
+      })
+    });
+  }
+
+  function parseQRPayload(text) {
+    var data = JSON.parse(text);
+    if (!data.d || !Array.isArray(data.d)) return null;
+    return {
+      days: data.d.map(function (day) {
+        if (!day.e || !Array.isArray(day.e)) throw new Error('Invalid');
+        return {
+          name: day.n || 'Day',
+          dayOfWeek: day.w != null ? day.w : null,
+          exercises: day.e.map(function (ex) {
+            return {
+              name: ex.n || 'Exercise',
+              targetSets: ex.s || 3,
+              targetReps: ex.r || 10,
+              targetRestSeconds: ex.t != null ? ex.t : 90
+            };
+          })
+        };
+      })
+    };
+  }
+
+  function showProgramQR() {
+    var payload = buildQRPayload();
+    var qr = QR.encode(payload);
+    if (!qr) { toast('Program too large for QR code'); return; }
+
+    var content = document.getElementById('qrContent');
+    content.innerHTML = '';
+    var canvas = document.createElement('canvas');
+    QR.toCanvas(qr, canvas, 6);
+    content.appendChild(canvas);
+
+    var info = document.createElement('div');
+    info.className = 'dialog-message';
+    info.textContent = 'Scan this from another device to import your program.';
+    content.appendChild(info);
+
+    document.getElementById('qrOverlay').classList.add('open');
+  }
+
+  document.getElementById('qrClose').addEventListener('click', function () {
+    document.getElementById('qrOverlay').classList.remove('open');
+  });
+  document.getElementById('qrOverlay').addEventListener('click', function (e) {
+    if (e.target === e.currentTarget) e.currentTarget.classList.remove('open');
+  });
+
+  // ── QR Scanner ──
+
+  var scannerStream = null;
+  var scannerInterval = null;
+
+  function openScanner() {
+    if (typeof BarcodeDetector === 'undefined') {
+      toast('QR scanning not supported — use Import Program instead');
+      return;
+    }
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+      .then(function (stream) {
+        scannerStream = stream;
+        var video = document.getElementById('scannerVideo');
+        video.srcObject = stream;
+        document.getElementById('scannerOverlay').classList.add('open');
+        document.getElementById('scannerStatus').textContent = 'Point camera at a QR code';
+
+        var detector = new BarcodeDetector({ formats: ['qr_code'] });
+        scannerInterval = setInterval(function () {
+          if (video.readyState < 2) return;
+          detector.detect(video).then(function (barcodes) {
+            if (barcodes.length > 0) {
+              var text = barcodes[0].rawValue;
+              closeScanner();
+              handleScannedQR(text);
+            }
+          }).catch(function () {});
+        }, 250);
+      })
+      .catch(function () {
+        toast('Camera access denied — use Import Program instead');
+      });
+  }
+
+  function closeScanner() {
+    if (scannerInterval) { clearInterval(scannerInterval); scannerInterval = null; }
+    if (scannerStream) { scannerStream.getTracks().forEach(function (t) { t.stop(); }); scannerStream = null; }
+    document.getElementById('scannerVideo').srcObject = null;
+    document.getElementById('scannerOverlay').classList.remove('open');
+  }
+
+  function handleScannedQR(text) {
+    try {
+      var prog = parseQRPayload(text);
+      if (!prog) throw new Error('Invalid');
+
+      var importData = { days: prog.days.map(function (d) { return { name: d.name, dayOfWeek: d.dayOfWeek, exercises: d.exercises }; }) };
+      importProgramFromData(importData);
+    } catch (e) {
+      toast('Not a valid Ironclad QR code');
+    }
+  }
+
+  document.getElementById('scannerClose').addEventListener('click', closeScanner);
 
   // ── Init ──
 

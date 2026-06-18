@@ -1,9 +1,10 @@
-const CACHE_NAME = 'ironclad-v3';
+const CACHE_NAME = 'ironclad-v8';
 const APP_SHELL = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './qr.js',
   './manifest.json',
   './icons/icon.svg',
   './icons/icon-maskable.svg',

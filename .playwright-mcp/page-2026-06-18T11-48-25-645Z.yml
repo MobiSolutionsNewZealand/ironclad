@@ -1,0 +1,806 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Ironclad
+      - button "♡ Connect HR" [ref=e6] [cursor=pointer]
+      - generic [ref=e7]: Thu, Jun 18
+  - text: ▸
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - textbox [ref=e11]: Monday
+        - combobox [ref=e12]:
+          - option "None"
+          - option "Sun"
+          - option "Mon" [selected]
+          - option "Tue"
+          - option "Wed"
+          - option "Thu"
+          - option "Fri"
+          - option "Sat"
+        - button "×" [ref=e13] [cursor=pointer]
+      - generic [ref=e14]:
+        - generic [ref=e15]: Sets
+        - generic [ref=e16]: Reps
+        - generic [ref=e17]: Rest
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - textbox [ref=e20]: Warmup Chest Press
+          - button "×" [ref=e21] [cursor=pointer]
+        - generic [ref=e22]:
+          - combobox [ref=e24]:
+            - option "1"
+            - option "2" [selected]
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e26]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10"
+            - option "12"
+            - option "15" [selected]
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e28]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e29]:
+          - generic "Edit how-to notes" [ref=e30] [cursor=pointer]
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - textbox [ref=e33]: Chest Press
+          - button "×" [ref=e34] [cursor=pointer]
+        - generic [ref=e35]:
+          - combobox [ref=e37]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e39]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10"
+            - option "12"
+            - option "15" [selected]
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e41]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e42]:
+          - generic "Edit how-to notes" [ref=e43] [cursor=pointer]
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - textbox [ref=e46]: Chest Fly
+          - button "×" [ref=e47] [cursor=pointer]
+        - generic [ref=e48]:
+          - combobox [ref=e50]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e52]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10"
+            - option "12"
+            - option "15" [selected]
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e54]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e55]:
+          - generic "Edit how-to notes" [ref=e56] [cursor=pointer]
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - textbox [ref=e59]: Shoulder Press
+          - button "×" [ref=e60] [cursor=pointer]
+        - generic [ref=e61]:
+          - combobox [ref=e63]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e65]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e67]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e68]:
+          - generic "Edit how-to notes" [ref=e69] [cursor=pointer]
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - textbox [ref=e72]: Triceps Push Downs
+          - button "×" [ref=e73] [cursor=pointer]
+        - generic [ref=e74]:
+          - combobox [ref=e76]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e78]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10"
+            - option "12"
+            - option "15" [selected]
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e80]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e81]:
+          - generic "Edit how-to notes" [ref=e82] [cursor=pointer]
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - textbox [ref=e85]: Rear Shoulder
+          - button "×" [ref=e86] [cursor=pointer]
+        - generic [ref=e87]:
+          - combobox [ref=e89]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e91]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e93]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e94]:
+          - generic "Edit how-to notes" [ref=e95] [cursor=pointer]
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - textbox [ref=e98]: Lateral Raises
+          - button "×" [ref=e99] [cursor=pointer]
+        - generic [ref=e100]:
+          - combobox [ref=e102]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e104]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e106]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e107]:
+          - generic "Edit how-to notes" [ref=e108] [cursor=pointer]
+      - button "+ Add Exercise" [ref=e109] [cursor=pointer]
+    - generic [ref=e110]:
+      - generic [ref=e111]:
+        - textbox [ref=e112]: Wednesday
+        - combobox [ref=e113]:
+          - option "None"
+          - option "Sun"
+          - option "Mon"
+          - option "Tue"
+          - option "Wed" [selected]
+          - option "Thu"
+          - option "Fri"
+          - option "Sat"
+        - button "×" [ref=e114] [cursor=pointer]
+      - generic [ref=e115]:
+        - generic [ref=e116]: Sets
+        - generic [ref=e117]: Reps
+        - generic [ref=e118]: Rest
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - textbox [ref=e121]: Lat Pull Downs
+          - button "×" [ref=e122] [cursor=pointer]
+        - generic [ref=e123]:
+          - combobox [ref=e125]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4" [selected]
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e127]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10"
+            - option "12" [selected]
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e129]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e130]:
+          - generic "Edit how-to notes" [ref=e131] [cursor=pointer]
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - textbox [ref=e134]: Barbell Rows
+          - button "×" [ref=e135] [cursor=pointer]
+        - generic [ref=e136]:
+          - combobox [ref=e138]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4" [selected]
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e140]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e142]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e143]:
+          - generic "Edit how-to notes" [ref=e144] [cursor=pointer]
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - textbox [ref=e147]: Seated Rows
+          - button "×" [ref=e148] [cursor=pointer]
+        - generic [ref=e149]:
+          - combobox [ref=e151]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e153]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e155]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e156]:
+          - generic "Edit how-to notes" [ref=e157] [cursor=pointer]
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - textbox [ref=e160]: Seated Row Machine
+          - button "×" [ref=e161] [cursor=pointer]
+        - generic [ref=e162]:
+          - combobox [ref=e164]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e166]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e168]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e169]:
+          - generic "Edit how-to notes" [ref=e170] [cursor=pointer]
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - textbox [ref=e173]: Bicep Alternating Curls
+          - button "×" [ref=e174] [cursor=pointer]
+        - generic [ref=e175]:
+          - combobox [ref=e177]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4" [selected]
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e179]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e181]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e182]:
+          - generic "Edit how-to notes" [ref=e183] [cursor=pointer]
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - textbox [ref=e186]: Hammer Curls
+          - button "×" [ref=e187] [cursor=pointer]
+        - generic [ref=e188]:
+          - combobox [ref=e190]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4" [selected]
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e192]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e194]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e195]:
+          - generic "Edit how-to notes" [ref=e196] [cursor=pointer]
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - textbox [ref=e199]: Easy Bar Curls
+          - button "×" [ref=e200] [cursor=pointer]
+        - generic [ref=e201]:
+          - combobox [ref=e203]:
+            - option "1"
+            - option "2"
+            - option "3" [selected]
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e205]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e207]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e208]:
+          - generic "Edit how-to notes" [ref=e209] [cursor=pointer]
+      - button "+ Add Exercise" [ref=e210] [cursor=pointer]
+    - generic [ref=e211]:
+      - generic [ref=e212]:
+        - textbox [ref=e213]: Friday
+        - combobox [ref=e214]:
+          - option "None"
+          - option "Sun"
+          - option "Mon"
+          - option "Tue"
+          - option "Wed"
+          - option "Thu"
+          - option "Fri" [selected]
+          - option "Sat"
+        - button "×" [ref=e215] [cursor=pointer]
+      - generic [ref=e216]:
+        - generic [ref=e217]: Sets
+        - generic [ref=e218]: Reps
+        - generic [ref=e219]: Rest
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - textbox [ref=e222]: Leg Extensions
+          - button "×" [ref=e223] [cursor=pointer]
+        - generic [ref=e224]:
+          - combobox [ref=e226]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5" [selected]
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e228]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10"
+            - option "12"
+            - option "15" [selected]
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e230]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e231]:
+          - generic "Edit how-to notes" [ref=e232] [cursor=pointer]
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - textbox [ref=e235]: Leg Curls
+          - button "×" [ref=e236] [cursor=pointer]
+        - generic [ref=e237]:
+          - combobox [ref=e239]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4" [selected]
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e241]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10"
+            - option "12"
+            - option "15" [selected]
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e243]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e244]:
+          - generic "Edit how-to notes" [ref=e245] [cursor=pointer]
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - textbox [ref=e248]: Leg Press
+          - button "×" [ref=e249] [cursor=pointer]
+        - generic [ref=e250]:
+          - combobox [ref=e252]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4" [selected]
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e254]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10"
+            - option "12"
+            - option "15"
+            - option "20" [selected]
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e256]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e257]:
+          - generic "Edit how-to notes" [ref=e258] [cursor=pointer]
+      - generic [ref=e259]:
+        - generic [ref=e260]:
+          - textbox [ref=e261]: Kettlebell Swings
+          - button "×" [ref=e262] [cursor=pointer]
+        - generic [ref=e263]:
+          - combobox [ref=e265]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4" [selected]
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "Custom…"
+          - combobox [ref=e267]:
+            - option "1"
+            - option "2"
+            - option "3"
+            - option "4"
+            - option "5"
+            - option "6"
+            - option "8"
+            - option "10" [selected]
+            - option "12"
+            - option "15"
+            - option "20"
+            - option "25"
+            - option "30"
+            - option "Custom…"
+          - combobox [ref=e269]:
+            - option "30 sec"
+            - option "45 sec"
+            - option "60 sec"
+            - option "90 sec" [selected]
+            - option "2 min"
+            - option "3 min"
+            - option "5 min"
+            - option "Custom…"
+        - group [ref=e270]:
+          - generic "Edit how-to notes" [ref=e271] [cursor=pointer]
+      - button "+ Add Exercise" [ref=e272] [cursor=pointer]
+    - button "+ Add Day" [ref=e273] [cursor=pointer]
+    - generic [ref=e274]:
+      - text: Haven't backed up in a while — export your data?
+      - generic [ref=e275]:
+        - button "Export Now" [ref=e276] [cursor=pointer]
+        - button "×" [ref=e277] [cursor=pointer]
+    - generic [ref=e278]:
+      - button "Show QR" [ref=e279] [cursor=pointer]
+      - button "Scan to Import" [ref=e280] [cursor=pointer]
+      - button "Share Program" [ref=e281] [cursor=pointer]
+      - button "Import Program" [ref=e282] [cursor=pointer]
+      - button "Export All Data" [ref=e283] [cursor=pointer]
+      - button "Import All Data" [ref=e284] [cursor=pointer]
+      - button "Clear All Data" [ref=e285] [cursor=pointer]
+  - navigation [ref=e286]:
+    - button "Today" [ref=e287] [cursor=pointer]:
+      - img [ref=e288]
+      - generic [ref=e289]: Today
+    - button "History" [ref=e290] [cursor=pointer]:
+      - img [ref=e291]
+      - generic [ref=e294]: History
+    - button "Program" [active] [ref=e295] [cursor=pointer]:
+      - img [ref=e296]
+      - generic [ref=e299]: Program

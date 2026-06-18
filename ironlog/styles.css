@@ -1264,6 +1264,68 @@ button {
   color: var(--chalk);
 }
 
+/* ── QR dialog ── */
+
+.qr-dialog {
+  max-width: 360px;
+  text-align: center;
+}
+
+.qr-dialog canvas {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: var(--radius-sm);
+  margin: 12px auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* ── Scanner overlay ── */
+
+.scanner-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: var(--iron);
+  flex-direction: column;
+}
+
+.scanner-overlay.open {
+  display: flex;
+}
+
+.scanner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.scanner-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.scanner-overlay video {
+  flex: 1;
+  width: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.scanner-status {
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--chalk-dim);
+  border-top: 1px solid var(--line);
+}
+
 /* ── File input (hidden) ── */
 
 .file-input {

@@ -69,6 +69,27 @@
     </div>
   </div>
 
+  <!-- ── QR overlay ── -->
+  <div class="dialog-overlay" id="qrOverlay">
+    <div class="dialog qr-dialog">
+      <div class="dialog-title" id="qrTitle">Share Program</div>
+      <div id="qrContent"></div>
+      <div class="dialog-buttons">
+        <button class="btn-cancel" id="qrClose">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Scanner overlay ── -->
+  <div class="scanner-overlay" id="scannerOverlay">
+    <div class="scanner-header">
+      <span class="scanner-title">Scan QR Code</span>
+      <button class="btn-cancel" id="scannerClose">&times;</button>
+    </div>
+    <video id="scannerVideo" autoplay playsinline></video>
+    <div class="scanner-status" id="scannerStatus">Point camera at a QR code</div>
+  </div>
+
   <!-- ── Toast ── -->
   <div class="toast" id="toast"></div>
 
@@ -76,6 +97,7 @@
   <input type="file" accept=".json,application/json" class="file-input" id="importInput">
   <input type="file" accept=".json,application/json" class="file-input" id="importProgramInput">
 
+  <script src="qr.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
