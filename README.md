@@ -57,11 +57,6 @@ Full walkthrough for new users (and friends you share this with): see `ironclad-
 
 Everything logged stays in `localStorage` on the device it's installed on. Nothing is sent anywhere — there's no server component at all. Exporting/sharing data is always an explicit, manual action (a file download or a QR code you choose to show someone).
 
-## Status / possible future additions
-
-- Live heart rate via a free Bluetooth broadcasting source (currently parked, pending picking a provider)
-- A "PT mode" for trainers to import and review client logs (designed, not yet built)
-
 ## License
 
 Personal project — no license currently applied. Ask before reusing.
