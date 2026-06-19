@@ -986,13 +986,21 @@
     }
 
     html += '<div class="data-actions">';
-    html += '<button class="btn-action" data-action="show-qr">Show QR</button>';
-    html += '<button class="btn-action" data-action="scan-qr">Scan to Import</button>';
-    html += '<button class="btn-action" data-action="share-program">Share Program</button>';
-    html += '<button class="btn-action" data-action="import-program">Import Program</button>';
-    html += '<button class="btn-action" data-action="export">Export All Data</button>';
-    html += '<button class="btn-action" data-action="import">Import All Data</button>';
-    html += '<button class="btn-action danger" data-action="clear-all">Clear All Data</button>';
+    html += '<div class="section-label">Program</div>';
+    html += '<div class="button-row">';
+    html += '<button class="btn-action" data-action="show-qr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="5" height="5"/><rect x="10" y="1" width="5" height="5"/><rect x="1" y="10" width="5" height="5"/><rect x="10" y="10" width="2" height="2"/><line x1="15" y1="10" x2="15" y2="15"/><line x1="10" y1="15" x2="15" y2="15"/></svg> Show QR</button>';
+    html += '<button class="btn-action" data-action="scan-qr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,5 1,1 5,1"/><polyline points="11,1 15,1 15,5"/><polyline points="15,11 15,15 11,15"/><polyline points="5,15 1,15 1,11"/><circle cx="8" cy="8" r="2"/></svg> Scan QR</button>';
+    html += '</div>';
+    html += '<div class="button-row">';
+    html += '<button class="btn-action" data-action="share-program"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v4h12v-4"/><polyline points="8,2 8,11"/><polyline points="5,8 8,11 11,8"/></svg> Export File</button>';
+    html += '<button class="btn-action" data-action="import-program"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v4h12v-4"/><polyline points="8,11 8,2"/><polyline points="5,5 8,2 11,5"/></svg> Import File</button>';
+    html += '</div>';
+    html += '<div class="section-label">Data</div>';
+    html += '<div class="button-row">';
+    html += '<button class="btn-action" data-action="export"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="12" height="12" rx="2"/><polyline points="8,5 8,11"/><polyline points="5.5,8.5 8,11 10.5,8.5"/></svg> Backup Data</button>';
+    html += '<button class="btn-action" data-action="import"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="12" height="12" rx="2"/><polyline points="8,11 8,5"/><polyline points="5.5,7.5 8,5 10.5,7.5"/></svg> Restore Data</button>';
+    html += '</div>';
+    html += '<button class="btn-action danger" data-action="clear-all"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,4 13,4"/><path d="M6,4V2.5h4V4"/><path d="M4,4v10.5h8V4"/><line x1="7" y1="7" x2="7" y2="12"/><line x1="9" y1="7" x2="9" y2="12"/></svg> Clear All Data</button>';
     html += '</div>';
 
     container.innerHTML = html;

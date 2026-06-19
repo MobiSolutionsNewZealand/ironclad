@@ -1162,11 +1162,43 @@ button {
 
 /* ── Data actions ── */
 
+.section-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--chalk-dim);
+  margin-bottom: 8px;
+}
+
+.section-label + .section-label {
+  margin-top: 0;
+}
+
 .data-actions {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 8px;
+}
+
+.data-actions .section-label {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.data-actions .section-label:first-child {
+  margin-top: 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+}
+
+.button-row .btn-action {
+  flex: 1;
 }
 
 .btn-action {
@@ -1181,6 +1213,14 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: background 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-action svg {
+  flex-shrink: 0;
 }
 
 .btn-action:active {
