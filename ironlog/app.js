@@ -678,8 +678,19 @@
       focusExerciseId = getFirstIncompleteExId(day, session);
     }
 
-    // Master strip
-    var html = '<div class="exercise-strip">';
+    var html = '';
+
+    // Detail panel first (primary content)
+    var focusRef = day.exercises.find(function (e) { return getExerciseId(e) === focusExerciseId; });
+    if (focusRef) {
+      var focusLib = getLibraryExercise(focusExerciseId);
+      var focusLogged = session ? getExerciseEntriesForSession(session, focusExerciseId) : [];
+      var focusDone = focusLogged.length >= focusRef.targetSets;
+      html += renderExpandedCard(focusRef, focusLib, focusLogged, focusDone, date, session);
+    }
+
+    // Tile grid below
+    html += '<div class="exercise-grid">';
     day.exercises.forEach(function (ref) {
       var exId = getExerciseId(ref);
       var lib = getLibraryExercise(exId);
@@ -689,8 +700,8 @@
       var isDone = filledCount >= ref.targetSets;
       var isActive = exId === focusExerciseId;
 
-      html += '<button class="exercise-chip' + (isActive ? ' active' : '') + (isDone ? ' done' : '') + '" data-action="focus-exercise" data-ex-id="' + exId + '">';
-      html += '<span class="exercise-chip-name">' + esc(exName) + '</span>';
+      html += '<button class="exercise-tile' + (isActive ? ' active' : '') + (isDone ? ' done' : '') + '" data-action="focus-exercise" data-ex-id="' + exId + '">';
+      html += '<span class="exercise-tile-name">' + esc(exName) + '</span>';
       html += '<div class="set-dots">';
       for (var i = 0; i < ref.targetSets; i++) {
         html += '<div class="set-dot mini' + (i < filledCount ? ' filled' : '') + '"></div>';
@@ -700,23 +711,8 @@
     });
     html += '</div>';
 
-    // Detail panel for the focused exercise
-    var focusRef = day.exercises.find(function (e) { return getExerciseId(e) === focusExerciseId; });
-    if (focusRef) {
-      var focusLib = getLibraryExercise(focusExerciseId);
-      var focusLogged = session ? getExerciseEntriesForSession(session, focusExerciseId) : [];
-      var focusDone = focusLogged.length >= focusRef.targetSets;
-      html += renderExpandedCard(focusRef, focusLib, focusLogged, focusDone, date, session);
-    }
-
     container.innerHTML = html;
     loadTodayPhotos();
-
-    // Scroll active chip into view
-    var activeChip = container.querySelector('.exercise-chip.active');
-    if (activeChip) {
-      activeChip.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    }
   }
 
   function renderExpandedCard(ref, lib, logged, isDone, date, session) {

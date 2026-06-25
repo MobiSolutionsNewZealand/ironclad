@@ -643,75 +643,78 @@ button {
   color: var(--chalk);
 }
 
-/* ── Exercise master strip (Today view) ── */
+/* ── Exercise tile grid (Today view) ── */
 
-.exercise-strip {
-  display: flex;
+.exercise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
-  overflow-x: auto;
-  padding: 0 0 12px;
-  scrollbar-width: none;
+  padding: 4px 0 0;
 }
 
-.exercise-strip::-webkit-scrollbar { display: none; }
-
-.exercise-chip {
-  flex-shrink: 0;
+.exercise-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 8px 14px;
-  border-radius: 20px;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 8px;
+  border-radius: var(--radius);
   border: 1px solid var(--line);
   background: var(--steel);
   color: var(--chalk-dim);
   transition: background 0.15s, color 0.15s, border-color 0.15s;
-  min-height: 44px;
+  min-height: 56px;
   cursor: pointer;
 }
 
-.exercise-chip.active {
+.exercise-tile:active {
+  background: var(--steel-2);
+}
+
+.exercise-tile.active {
   background: var(--rust);
   border-color: var(--rust);
   color: var(--chalk);
 }
 
-.exercise-chip.done {
+.exercise-tile.done {
   border-color: var(--rust-dim);
 }
 
-.exercise-chip.active.done {
+.exercise-tile.active.done {
   background: var(--rust-dim);
   border-color: var(--rust-dim);
 }
 
-.exercise-chip-name {
+.exercise-tile-name {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  white-space: nowrap;
+  text-align: center;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
-.exercise-chip .set-dots {
+.exercise-tile .set-dots {
   margin-bottom: 0;
   gap: 4px;
 }
 
-.exercise-chip .set-dot.mini {
+.exercise-tile .set-dot.mini {
   width: 7px;
   height: 7px;
   border-width: 1px;
 }
 
-.exercise-chip.active .set-dot {
+.exercise-tile.active .set-dot {
   border-color: rgba(255,255,255,0.4);
   background: rgba(255,255,255,0.15);
 }
 
-.exercise-chip.active .set-dot.filled {
+.exercise-tile.active .set-dot.filled {
   background: var(--chalk);
   border-color: var(--chalk);
 }
