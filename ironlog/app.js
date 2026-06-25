@@ -175,7 +175,7 @@
 
   // ── Body parts ──
 
-  var BODY_PARTS = ['Chest', 'Back', 'Shoulders', 'Arms', 'Legs', 'Core', 'Full Body/Other'];
+  var BODY_PARTS = ['Chest', 'Back', 'Shoulders', 'Arms', 'Legs', 'Core', 'Cardio', 'Full Body/Other'];
 
   // ── Data migration ──
 
@@ -235,24 +235,26 @@
 
   function defaultExerciseLibrary() {
     return [
-      { id: 'ex_wcp', name: 'Warmup Chest Press', bodyPart: 'Chest', videoUrl: '', description: 'Same setup as Chest Press, but with a light weight focused purely on smooth, full-range reps to warm the shoulders and chest before working sets.', imageIds: [] },
-      { id: 'ex_cp', name: 'Chest Press', bodyPart: 'Chest', videoUrl: '', description: 'Sit with back flat against the pad, grips at chest height. Press handles forward until arms extend without locking elbows, then control the return. Keep shoulder blades pinned back throughout.', imageIds: [] },
-      { id: 'ex_cf', name: 'Chest Fly', bodyPart: 'Chest', videoUrl: '', description: 'Sit upright, arms slightly bent, palms facing in. Bring handles together in a wide arc in front of your chest, squeezing at the centre, then return slowly under control.', imageIds: [] },
-      { id: 'ex_sp', name: 'Shoulder Press', bodyPart: 'Shoulders', videoUrl: '', description: 'Sit with back supported, grips at shoulder height. Press straight overhead until arms are extended, then lower back to the start without flaring elbows too far forward or back.', imageIds: [] },
-      { id: 'ex_tpd', name: 'Triceps Push Downs', bodyPart: 'Arms', videoUrl: '', description: 'Stand facing the cable stack, elbows pinned to your sides. Push the bar/rope down until arms are fully extended, then let it return under control without letting elbows drift forward.', imageIds: [] },
-      { id: 'ex_rs', name: 'Rear Shoulder', bodyPart: 'Shoulders', videoUrl: '', description: 'Sit facing into the pad (or bend forward for a cable version), arms slightly bent. Pull handles back and out to the sides, squeezing shoulder blades together, then return slowly.', imageIds: [] },
-      { id: 'ex_lr', name: 'Lateral Raises', bodyPart: 'Shoulders', videoUrl: '', description: 'Stand with a slight bend in the elbows. Raise arms out to the sides to roughly shoulder height, leading with the elbows, then lower under control. Avoid swinging or shrugging the shoulders up.', imageIds: [] },
-      { id: 'ex_lpd', name: 'Lat Pull Downs', bodyPart: 'Back', videoUrl: '', description: 'Grip the bar wider than shoulder width, sit with thighs locked under the pad. Pull the bar down to upper chest, driving elbows down and back, then control the return to a full stretch overhead.', imageIds: [] },
-      { id: 'ex_br', name: 'Barbell Rows', bodyPart: 'Back', videoUrl: '', description: 'Hinge at the hips with a flat back, grip the bar just outside shoulder width. Pull the bar up to your lower ribs, squeezing shoulder blades together, then lower with control without rounding the back.', imageIds: [] },
-      { id: 'ex_sr', name: 'Seated Rows', bodyPart: 'Back', videoUrl: '', description: 'Sit with knees slightly bent, grip the handle, back upright. Pull the handle to your stomach, driving elbows back, then extend arms fully forward without letting shoulders round.', imageIds: [] },
-      { id: 'ex_srm', name: 'Seated Row Machine', bodyPart: 'Back', videoUrl: '', description: 'Sit facing the machine, chest against the pad if available. Pull the handles back, leading with elbows, squeeze shoulder blades together, then return slowly to a full stretch.', imageIds: [] },
-      { id: 'ex_bac', name: 'Bicep Alternating Curls', bodyPart: 'Arms', videoUrl: '', description: 'Stand or sit with arms hanging at your sides. Curl one dumbbell up toward the shoulder, rotating the palm up as you go, then lower under control before alternating sides.', imageIds: [] },
-      { id: 'ex_hc', name: 'Hammer Curls', bodyPart: 'Arms', videoUrl: '', description: 'Same setup as alternating curls, but palms face each other throughout (neutral grip). Curl up, squeeze briefly, then lower slowly.', imageIds: [] },
-      { id: 'ex_ebc', name: 'Easy Bar Curls', bodyPart: 'Arms', videoUrl: '', description: 'Grip the EZ-bar at the angled sections, stand with elbows close to your sides. Curl the bar up toward your shoulders without swinging your hips, then lower under control.', imageIds: [] },
-      { id: 'ex_le', name: 'Leg Extensions', bodyPart: 'Legs', videoUrl: '', description: 'Sit with the pad resting on your shins, back against the seat. Extend your legs until straight (without locking out hard), pause briefly, then lower under control.', imageIds: [] },
-      { id: 'ex_lc', name: 'Leg Curls', bodyPart: 'Legs', videoUrl: '', description: 'Pad positioned behind your ankles. Curl your heels toward your glutes, squeeze briefly, then extend back out under control.', imageIds: [] },
-      { id: 'ex_lp', name: 'Leg Press', bodyPart: 'Legs', videoUrl: '', description: 'Sit back in the machine with feet shoulder-width on the platform. Lower the platform by bending your knees toward your chest without rounding your lower back, then press back up without locking your knees out hard.', imageIds: [] },
-      { id: 'ex_ks', name: 'Kettlebell Swings', bodyPart: 'Full Body/Other', videoUrl: '', description: 'Stand with feet shoulder-width apart, kettlebell in front of you. Hinge at the hips to swing the bell back between your legs, then drive through your hips to swing it up to chest height, keeping your back flat throughout.', imageIds: [] }
+      { id: 'ex_wcp', name: 'Warmup Chest Press', bodyPart: 'Chest', videoUrl: '', description: 'Same setup as Chest Press, but with a light weight focused purely on smooth, full-range reps to warm the shoulders and chest before working sets.', imageIds: [], type: 'strength' },
+      { id: 'ex_cp', name: 'Chest Press', bodyPart: 'Chest', videoUrl: '', description: 'Sit with back flat against the pad, grips at chest height. Press handles forward until arms extend without locking elbows, then control the return. Keep shoulder blades pinned back throughout.', imageIds: [], type: 'strength' },
+      { id: 'ex_cf', name: 'Chest Fly', bodyPart: 'Chest', videoUrl: '', description: 'Sit upright, arms slightly bent, palms facing in. Bring handles together in a wide arc in front of your chest, squeezing at the centre, then return slowly under control.', imageIds: [], type: 'strength' },
+      { id: 'ex_sp', name: 'Shoulder Press', bodyPart: 'Shoulders', videoUrl: '', description: 'Sit with back supported, grips at shoulder height. Press straight overhead until arms are extended, then lower back to the start without flaring elbows too far forward or back.', imageIds: [], type: 'strength' },
+      { id: 'ex_tpd', name: 'Triceps Push Downs', bodyPart: 'Arms', videoUrl: '', description: 'Stand facing the cable stack, elbows pinned to your sides. Push the bar/rope down until arms are fully extended, then let it return under control without letting elbows drift forward.', imageIds: [], type: 'strength' },
+      { id: 'ex_rs', name: 'Rear Shoulder', bodyPart: 'Shoulders', videoUrl: '', description: 'Sit facing into the pad (or bend forward for a cable version), arms slightly bent. Pull handles back and out to the sides, squeezing shoulder blades together, then return slowly.', imageIds: [], type: 'strength' },
+      { id: 'ex_lr', name: 'Lateral Raises', bodyPart: 'Shoulders', videoUrl: '', description: 'Stand with a slight bend in the elbows. Raise arms out to the sides to roughly shoulder height, leading with the elbows, then lower under control. Avoid swinging or shrugging the shoulders up.', imageIds: [], type: 'strength' },
+      { id: 'ex_lpd', name: 'Lat Pull Downs', bodyPart: 'Back', videoUrl: '', description: 'Grip the bar wider than shoulder width, sit with thighs locked under the pad. Pull the bar down to upper chest, driving elbows down and back, then control the return to a full stretch overhead.', imageIds: [], type: 'strength' },
+      { id: 'ex_br', name: 'Barbell Rows', bodyPart: 'Back', videoUrl: '', description: 'Hinge at the hips with a flat back, grip the bar just outside shoulder width. Pull the bar up to your lower ribs, squeezing shoulder blades together, then lower with control without rounding the back.', imageIds: [], type: 'strength' },
+      { id: 'ex_sr', name: 'Seated Rows', bodyPart: 'Back', videoUrl: '', description: 'Sit with knees slightly bent, grip the handle, back upright. Pull the handle to your stomach, driving elbows back, then extend arms fully forward without letting shoulders round.', imageIds: [], type: 'strength' },
+      { id: 'ex_srm', name: 'Seated Row Machine', bodyPart: 'Back', videoUrl: '', description: 'Sit facing the machine, chest against the pad if available. Pull the handles back, leading with elbows, squeeze shoulder blades together, then return slowly to a full stretch.', imageIds: [], type: 'strength' },
+      { id: 'ex_bac', name: 'Bicep Alternating Curls', bodyPart: 'Arms', videoUrl: '', description: 'Stand or sit with arms hanging at your sides. Curl one dumbbell up toward the shoulder, rotating the palm up as you go, then lower under control before alternating sides.', imageIds: [], type: 'strength' },
+      { id: 'ex_hc', name: 'Hammer Curls', bodyPart: 'Arms', videoUrl: '', description: 'Same setup as alternating curls, but palms face each other throughout (neutral grip). Curl up, squeeze briefly, then lower slowly.', imageIds: [], type: 'strength' },
+      { id: 'ex_ebc', name: 'Easy Bar Curls', bodyPart: 'Arms', videoUrl: '', description: 'Grip the EZ-bar at the angled sections, stand with elbows close to your sides. Curl the bar up toward your shoulders without swinging your hips, then lower under control.', imageIds: [], type: 'strength' },
+      { id: 'ex_le', name: 'Leg Extensions', bodyPart: 'Legs', videoUrl: '', description: 'Sit with the pad resting on your shins, back against the seat. Extend your legs until straight (without locking out hard), pause briefly, then lower under control.', imageIds: [], type: 'strength' },
+      { id: 'ex_lc', name: 'Leg Curls', bodyPart: 'Legs', videoUrl: '', description: 'Pad positioned behind your ankles. Curl your heels toward your glutes, squeeze briefly, then extend back out under control.', imageIds: [], type: 'strength' },
+      { id: 'ex_lp', name: 'Leg Press', bodyPart: 'Legs', videoUrl: '', description: 'Sit back in the machine with feet shoulder-width on the platform. Lower the platform by bending your knees toward your chest without rounding your lower back, then press back up without locking your knees out hard.', imageIds: [], type: 'strength' },
+      { id: 'ex_ks', name: 'Kettlebell Swings', bodyPart: 'Full Body/Other', videoUrl: '', description: 'Stand with feet shoulder-width apart, kettlebell in front of you. Hinge at the hips to swing the bell back between your legs, then drive through your hips to swing it up to chest height, keeping your back flat throughout.', imageIds: [], type: 'strength' },
+      { id: 'ex_treadmill', name: 'Treadmill', bodyPart: 'Cardio', videoUrl: '', description: '', imageIds: [], type: 'cardio' },
+      { id: 'ex_cycle', name: 'Cycle', bodyPart: 'Cardio', videoUrl: '', description: '', imageIds: [], type: 'cardio' }
     ];
   }
 
@@ -319,6 +321,20 @@
     }
   }
 
+  // Add cardio seed exercises if missing
+  (function () {
+    var seeds = [
+      { id: 'ex_treadmill', name: 'Treadmill', bodyPart: 'Cardio', videoUrl: '', description: '', imageIds: [], type: 'cardio' },
+      { id: 'ex_cycle', name: 'Cycle', bodyPart: 'Cardio', videoUrl: '', description: '', imageIds: [], type: 'cardio' }
+    ];
+    var ids = new Set(exerciseLibrary.map(function (e) { return e.id; }));
+    var added = false;
+    seeds.forEach(function (s) {
+      if (!ids.has(s.id)) { exerciseLibrary.push(s); added = true; }
+    });
+    if (added) saveJSON(KEYS.exerciseLibrary, exerciseLibrary);
+  })();
+
   var sessions = loadJSON(KEYS.sessions, []);
   var selectedDayId = localStorage.getItem(KEYS.selectedDay) || null;
   var currentView = 'today';
@@ -357,6 +373,24 @@
 
   function getExerciseId(ref) {
     return ref.libraryExerciseId;
+  }
+
+  function isCardio(exIdOrLib) {
+    var lib = typeof exIdOrLib === 'string' ? getLibraryExercise(exIdOrLib) : exIdOrLib;
+    return lib && lib.type === 'cardio';
+  }
+
+  function getLastDistance(exerciseId, excludeDate) {
+    for (var i = sessions.length - 1; i >= 0; i--) {
+      var s = sessions[i];
+      if (excludeDate && s.date === excludeDate) continue;
+      for (var j = s.entries.length - 1; j >= 0; j--) {
+        if (s.entries[j].exerciseId === exerciseId && s.entries[j].distance != null) {
+          return s.entries[j].distance;
+        }
+      }
+    }
+    return null;
   }
 
   // ── Confirm dialog ──
@@ -718,30 +752,41 @@
   function renderExpandedCard(ref, lib, logged, isDone, date, session) {
     var exId = getExerciseId(ref);
     var exName = lib ? lib.name : 'Unknown Exercise';
+    var cardio = isCardio(lib);
     var filledCount = logged.length;
+
     var lastWeight = getLastWeight(exId, date);
+    var lastDist = getLastDistance(exId, date);
     var currentWeight = logged.length > 0
       ? logged[logged.length - 1].weight
       : (lastWeight != null ? lastWeight : 0);
+    var currentDistance = logged.length > 0 && logged[logged.length - 1].distance != null
+      ? logged[logged.length - 1].distance
+      : (lastDist != null ? lastDist : 0);
     var currentReps = logged.length > 0
       ? logged[logged.length - 1].reps
       : ref.targetReps;
 
     var timer = getTimer(exId);
     if (timer.pendingWeight != null && (timer.status === 'active' || timer.status === 'resting')) {
-      currentWeight = timer.pendingWeight;
+      if (cardio) currentDistance = timer.pendingWeight;
+      else currentWeight = timer.pendingWeight;
     }
     if (timer.pendingReps != null && (timer.status === 'active' || timer.status === 'resting')) {
       currentReps = timer.pendingReps;
     }
     var h = '';
 
-    h += '<div class="exercise-card' + (isDone ? ' done' : '') + '" data-ex-id="' + exId + '">';
+    h += '<div class="exercise-card' + (isDone ? ' done' : '') + '" data-ex-id="' + exId + '" data-ex-type="' + (cardio ? 'cardio' : 'strength') + '">';
 
     // Header
     h += '<div class="exercise-card-header">';
     h += '<span class="exercise-name">' + esc(exName) + '</span>';
-    h += '<span class="exercise-target">' + ref.targetReps + ' &times; ' + ref.targetSets + '</span>';
+    if (cardio) {
+      h += '<span class="exercise-target">' + ref.targetSets + (ref.targetSets === 1 ? ' round' : ' rounds') + '</span>';
+    } else {
+      h += '<span class="exercise-target">' + ref.targetReps + ' &times; ' + ref.targetSets + '</span>';
+    }
     h += '</div>';
 
     // How-to section sourced from library
@@ -772,8 +817,10 @@
       }
     }
 
-    if (lastWeight != null) {
-      h += '<div class="exercise-last">last: ' + lastWeight + 'kg</div>';
+    if (cardio) {
+      if (lastDist != null) h += '<div class="exercise-last">last: ' + lastDist + 'km</div>';
+    } else {
+      if (lastWeight != null) h += '<div class="exercise-last">last: ' + lastWeight + 'kg</div>';
     }
 
     // Set dots
@@ -788,7 +835,7 @@
     if (timer.status === 'active') {
       var elapsed = Math.floor((Date.now() - timer.startTime) / 1000);
       h += '<div class="timer-area">';
-      h += '<div class="timer-label active">Set</div>';
+      h += '<div class="timer-label active">' + (cardio ? 'Go' : 'Set') + '</div>';
       h += '<div class="timer-display" data-timer-display="' + exId + '">' + formatTimer(elapsed) + '</div>';
       h += '</div>';
     } else if (timer.status === 'resting') {
@@ -803,22 +850,32 @@
       h += '</div>';
     }
 
-    // Steppers
+    // Steppers — cardio gets distance instead of weight, no reps
     h += '<div class="stepper-row">';
-    h += '<div class="stepper-group"><div class="stepper-label">Weight</div>';
-    h += '<div class="stepper">';
-    h += '<button class="stepper-btn" data-action="weight-dec" data-ex="' + exId + '">&minus;</button>';
-    h += '<input type="number" class="stepper-value" data-field="weight" data-ex="' + exId + '" value="' + currentWeight + '" step="2.5" min="0" inputmode="decimal">';
-    h += '<span class="stepper-unit">kg</span>';
-    h += '<button class="stepper-btn" data-action="weight-inc" data-ex="' + exId + '">&plus;</button>';
-    h += '</div></div>';
+    if (cardio) {
+      h += '<div class="stepper-group"><div class="stepper-label">Distance</div>';
+      h += '<div class="stepper">';
+      h += '<button class="stepper-btn" data-action="weight-dec" data-ex="' + exId + '">&minus;</button>';
+      h += '<input type="number" class="stepper-value" data-field="weight" data-ex="' + exId + '" value="' + currentDistance + '" step="0.1" min="0" inputmode="decimal">';
+      h += '<span class="stepper-unit">km</span>';
+      h += '<button class="stepper-btn" data-action="weight-inc" data-ex="' + exId + '">&plus;</button>';
+      h += '</div></div>';
+    } else {
+      h += '<div class="stepper-group"><div class="stepper-label">Weight</div>';
+      h += '<div class="stepper">';
+      h += '<button class="stepper-btn" data-action="weight-dec" data-ex="' + exId + '">&minus;</button>';
+      h += '<input type="number" class="stepper-value" data-field="weight" data-ex="' + exId + '" value="' + currentWeight + '" step="2.5" min="0" inputmode="decimal">';
+      h += '<span class="stepper-unit">kg</span>';
+      h += '<button class="stepper-btn" data-action="weight-inc" data-ex="' + exId + '">&plus;</button>';
+      h += '</div></div>';
 
-    h += '<div class="stepper-group"><div class="stepper-label">Reps</div>';
-    h += '<div class="stepper">';
-    h += '<button class="stepper-btn" data-action="reps-dec" data-ex="' + exId + '">&minus;</button>';
-    h += '<input type="number" class="stepper-value" data-field="reps" data-ex="' + exId + '" value="' + currentReps + '" step="1" min="0" inputmode="numeric">';
-    h += '<button class="stepper-btn" data-action="reps-inc" data-ex="' + exId + '">&plus;</button>';
-    h += '</div></div>';
+      h += '<div class="stepper-group"><div class="stepper-label">Reps</div>';
+      h += '<div class="stepper">';
+      h += '<button class="stepper-btn" data-action="reps-dec" data-ex="' + exId + '">&minus;</button>';
+      h += '<input type="number" class="stepper-value" data-field="reps" data-ex="' + exId + '" value="' + currentReps + '" step="1" min="0" inputmode="numeric">';
+      h += '<button class="stepper-btn" data-action="reps-inc" data-ex="' + exId + '">&plus;</button>';
+      h += '</div></div>';
+    }
     h += '</div>';
 
     // RPE
@@ -852,7 +909,12 @@
     if (logged.length > 0) {
       h += '<div class="logged-sets">';
       logged.forEach(function (entry, idx) {
-        var text = 'Set ' + (idx + 1) + ' — <span>' + entry.weight + 'kg &times;' + entry.reps + '</span>';
+        var text;
+        if (cardio) {
+          text = (ref.targetSets > 1 ? 'Round ' : '') + (idx + 1) + ' — <span>' + (entry.distance != null ? entry.distance + 'km' : '') + '</span>';
+        } else {
+          text = 'Set ' + (idx + 1) + ' — <span>' + entry.weight + 'kg &times;' + entry.reps + '</span>';
+        }
         if (entry.rpe) text += ' @' + entry.rpe;
         if (entry.durationSeconds) text += ' ' + formatTimer(entry.durationSeconds);
         if (entry.heartRate) text += ' &hearts;' + entry.heartRate;
@@ -916,8 +978,9 @@
     if (action === 'weight-dec' || action === 'weight-inc') {
       var wInput = cardEl.querySelector('input[data-field="weight"][data-ex="' + exId + '"]');
       var wVal = parseFloat(wInput.value) || 0;
-      wVal = action === 'weight-inc' ? wVal + 2.5 : Math.max(0, wVal - 2.5);
-      wInput.value = wVal;
+      var step = isCardio(exId) ? 0.1 : 2.5;
+      wVal = action === 'weight-inc' ? wVal + step : Math.max(0, wVal - step);
+      wInput.value = Math.round(wVal * 10) / 10;
     }
 
     if (action === 'reps-dec' || action === 'reps-inc') {
@@ -949,27 +1012,33 @@
     var card = views.today.querySelector('.exercise-card[data-ex-id="' + exId + '"]');
     if (!card) return;
 
-    var weight = parseFloat(card.querySelector('input[data-field="weight"][data-ex="' + exId + '"]').value) || 0;
-    var reps = parseInt(card.querySelector('input[data-field="reps"][data-ex="' + exId + '"]').value) || 0;
+    var cardio = isCardio(exId);
+    var weightInput = card.querySelector('input[data-field="weight"][data-ex="' + exId + '"]');
+    var weightVal = weightInput ? (parseFloat(weightInput.value) || 0) : 0;
+    var repsInput = card.querySelector('input[data-field="reps"][data-ex="' + exId + '"]');
+    var reps = repsInput ? (parseInt(repsInput.value) || 0) : 0;
     var notesInput = card.querySelector('input[data-field="notes"][data-ex="' + exId + '"]');
     var notes = notesInput.value.trim();
 
     var activeRpe = card.querySelector('.rpe-chip.active[data-ex="' + exId + '"]');
     var rpe = activeRpe ? parseInt(activeRpe.dataset.rpe) : null;
 
-    var sess = getOrCreateSession(selectedDayId, todayISO());
-    sess.entries.push({
+    var entry = {
       exerciseId: exId,
       exerciseName: exName,
-      weight: weight,
-      reps: reps,
+      weight: cardio ? 0 : weightVal,
+      reps: cardio ? 0 : reps,
       rpe: rpe,
       notes: notes || '',
       time: new Date().toISOString(),
       durationSeconds: durationSeconds || null,
       restBeforeSeconds: restBeforeSeconds,
       heartRate: hr.connected ? hr.bpm : null
-    });
+    };
+    if (cardio) entry.distance = weightVal;
+
+    var sess = getOrCreateSession(selectedDayId, todayISO());
+    sess.entries.push(entry);
     saveJSON(KEYS.sessions, sessions);
 
     // Check for auto-advance
@@ -1060,6 +1129,8 @@
     var topWeight = 0;
     var volume = 0;
     var bestE1rm = 0;
+    var totalDistance = 0;
+    var totalDuration = 0;
     entries.forEach(function (e) {
       var w = e.weight || 0;
       var r = e.reps || 0;
@@ -1069,8 +1140,10 @@
         var e1rm = w * (1 + r / 30);
         if (e1rm > bestE1rm) bestE1rm = e1rm;
       }
+      if (e.distance != null) totalDistance += e.distance;
+      if (e.durationSeconds) totalDuration += e.durationSeconds;
     });
-    return { topWeight: topWeight, volume: volume, e1rm: Math.round(bestE1rm * 10) / 10 };
+    return { topWeight: topWeight, volume: volume, e1rm: Math.round(bestE1rm * 10) / 10, distance: Math.round(totalDistance * 100) / 100, duration: totalDuration };
   }
 
   function renderHistory() {
@@ -1087,26 +1160,31 @@
         var sessionMetrics = dates.map(function (d) {
           return computeSessionMetrics(data.sessions.get(d));
         });
+        var cardio = isCardio(exId);
 
         var isExpanded = progressExpandedExId === exId;
         var topWeights = sessionMetrics.map(function (m) { return m.topWeight; });
         var volumes = sessionMetrics.map(function (m) { return m.volume; });
         var e1rms = sessionMetrics.map(function (m) { return m.e1rm; });
+        var distances = sessionMetrics.map(function (m) { return m.distance; });
+        var durations = sessionMetrics.map(function (m) { return m.duration; });
 
-        var best = Math.max.apply(null, topWeights);
-        var bestVolume = Math.max.apply(null, volumes);
-        var latest = topWeights[topWeights.length - 1];
-        var prev = topWeights.length >= 2 ? topWeights[topWeights.length - 2] : latest;
+        var sparkValues = cardio ? distances : topWeights;
+        var primaryValues = cardio ? distances : topWeights;
+        var best = Math.max.apply(null, primaryValues);
+        var latest = primaryValues[primaryValues.length - 1];
+        var prev = primaryValues.length >= 2 ? primaryValues[primaryValues.length - 2] : latest;
         var trendClass = 'trend-flat';
         var trendSymbol = '—';
         if (latest > prev) { trendClass = 'trend-up'; trendSymbol = '▲'; }
         else if (latest < prev) { trendClass = 'trend-down'; trendSymbol = '▼'; }
 
         // PR detection
-        var latestWeight = topWeights[topWeights.length - 1];
-        var latestVolume = volumes[volumes.length - 1];
-        var isWeightPR = topWeights.length > 1 && latestWeight > 0 && latestWeight >= best;
-        var isVolumePR = volumes.length > 1 && latestVolume > 0 && latestVolume >= bestVolume;
+        var bestVolume = cardio ? 0 : Math.max.apply(null, volumes);
+        var latestPrimary = primaryValues[primaryValues.length - 1];
+        var latestVolume = cardio ? 0 : volumes[volumes.length - 1];
+        var isPrimaryPR = primaryValues.length > 1 && latestPrimary > 0 && latestPrimary >= best;
+        var isVolumePR = !cardio && volumes.length > 1 && latestVolume > 0 && latestVolume >= bestVolume;
 
         html += '<div class="progress-exercise-card' + (isExpanded ? ' expanded' : '') + '" data-progress-ex="' + exId + '">';
         html += '<div class="progress-exercise-header">';
@@ -1115,15 +1193,22 @@
         html += '</div>';
 
         if (!isExpanded) {
-          html += '<div class="progress-sparkline">' + buildSparkline(topWeights) + '</div>';
+          html += '<div class="progress-sparkline">' + buildSparkline(sparkValues) + '</div>';
         }
 
-        // Stats line (always visible)
+        // Stats line
         html += '<div class="progress-stats">';
-        html += '<span>Best: <span class="value">' + best + 'kg</span>';
-        if (isWeightPR) html += '<span class="pr-badge">PR</span>';
-        html += '</span>';
-        html += '<span>Latest: <span class="value">' + latest + 'kg</span></span>';
+        if (cardio) {
+          html += '<span>Best: <span class="value">' + best + 'km</span>';
+          if (isPrimaryPR) html += '<span class="pr-badge">PR</span>';
+          html += '</span>';
+          html += '<span>Latest: <span class="value">' + latest + 'km</span></span>';
+        } else {
+          html += '<span>Best: <span class="value">' + best + 'kg</span>';
+          if (isPrimaryPR) html += '<span class="pr-badge">PR</span>';
+          html += '</span>';
+          html += '<span>Latest: <span class="value">' + latest + 'kg</span></span>';
+        }
         html += '<span>Trend: <span class="' + trendClass + '">' + trendSymbol + '</span></span>';
         if (isVolumePR) html += '<span>Vol: <span class="value">' + latestVolume.toLocaleString() + 'kg</span><span class="pr-badge">PR</span></span>';
         html += '</div>';
@@ -1131,18 +1216,27 @@
         // Expanded chart area
         html += '<div class="progress-chart-area">';
         html += '<div class="progress-metric-toggle">';
-        html += '<button class="progress-metric-btn' + (progressMetric === 'weight' ? ' active' : '') + '" data-metric="weight">Weight</button>';
-        html += '<button class="progress-metric-btn' + (progressMetric === 'volume' ? ' active' : '') + '" data-metric="volume">Volume</button>';
-        html += '<button class="progress-metric-btn' + (progressMetric === 'e1rm' ? ' active' : '') + '" data-metric="e1rm">Est 1RM</button>';
+        if (cardio) {
+          html += '<button class="progress-metric-btn' + (progressMetric === 'weight' || progressMetric === 'distance' ? ' active' : '') + '" data-metric="distance">Distance</button>';
+          html += '<button class="progress-metric-btn' + (progressMetric === 'duration' ? ' active' : '') + '" data-metric="duration">Duration</button>';
+        } else {
+          html += '<button class="progress-metric-btn' + (progressMetric === 'weight' ? ' active' : '') + '" data-metric="weight">Weight</button>';
+          html += '<button class="progress-metric-btn' + (progressMetric === 'volume' ? ' active' : '') + '" data-metric="volume">Volume</button>';
+          html += '<button class="progress-metric-btn' + (progressMetric === 'e1rm' ? ' active' : '') + '" data-metric="e1rm">Est 1RM</button>';
+        }
         html += '</div>';
 
         var chartValues;
         var chartUnit;
-        if (progressMetric === 'volume') { chartValues = volumes; chartUnit = 'kg'; }
-        else if (progressMetric === 'e1rm') { chartValues = e1rms; chartUnit = 'kg'; }
-        else { chartValues = topWeights; chartUnit = 'kg'; }
+        if (cardio) {
+          if (progressMetric === 'duration') { chartValues = durations.map(function (d) { return Math.round(d / 60 * 10) / 10; }); chartUnit = 'min'; }
+          else { chartValues = distances; chartUnit = 'km'; }
+        } else {
+          if (progressMetric === 'volume') { chartValues = volumes; chartUnit = 'kg'; }
+          else if (progressMetric === 'e1rm') { chartValues = e1rms; chartUnit = 'kg'; }
+          else { chartValues = topWeights; chartUnit = 'kg'; }
+        }
 
-        // PR indices for chart markers
         var prIndices = computePRIndices(chartValues);
 
         html += '<div class="progress-chart">' + buildFullChart(chartValues, dates, chartUnit, prIndices) + '</div>';
@@ -1462,6 +1556,7 @@
         var exId = getExerciseId(ref);
         var lib = getLibraryExercise(exId);
         var exName = lib ? lib.name : 'Unknown Exercise';
+        var cardio = isCardio(lib);
         html += '<div class="program-exercise" data-ex-id="' + exId + '">';
         html += '<div class="program-ex-line1">';
         html += '<span class="program-ex-name-readonly" data-action="goto-library-ex" data-ex="' + exId + '">' + esc(exName) + '</span>';
@@ -1469,7 +1564,7 @@
         html += '</div>';
         html += '<div class="program-ex-line2">';
         html += buildNumericSelect(SETS_PRESETS, ref.targetSets, 'change-sets', day.id, exId);
-        html += buildNumericSelect(REPS_PRESETS, ref.targetReps, 'change-reps', day.id, exId);
+        if (!cardio) html += buildNumericSelect(REPS_PRESETS, ref.targetReps, 'change-reps', day.id, exId);
         html += buildRestSelect(ref.targetRestSeconds || 90, day.id, exId);
         html += '</div>';
         html += '</div>';
@@ -1858,6 +1953,14 @@
     BODY_PARTS.forEach(function (bp) {
       h += '<option value="' + bp + '"' + (lib.bodyPart === bp ? ' selected' : '') + '>' + bp + '</option>';
     });
+    h += '</select>';
+    h += '</div>';
+
+    h += '<div class="exercise-detail-field">';
+    h += '<div class="exercise-detail-label">Type</div>';
+    h += '<select class="exercise-detail-select" data-field="type">';
+    h += '<option value="strength"' + ((lib.type || 'strength') === 'strength' ? ' selected' : '') + '>Strength</option>';
+    h += '<option value="cardio"' + (lib.type === 'cardio' ? ' selected' : '') + '>Cardio</option>';
     h += '</select>';
     h += '</div>';
 
