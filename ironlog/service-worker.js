@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ironclad-v15';
+const CACHE_NAME = 'ironclad-v16';
 const APP_SHELL = [
   './',
   './index.html',
